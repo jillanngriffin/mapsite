@@ -18,9 +18,7 @@ RUN npm install
 COPY map-entry.sh /bin/map-entry.sh
 RUN chmod +x /bin/map-entry.sh
 
-COPY images /node-monstra/public/images
-COPY css /node-monstra/public/stylesheets
-COPY js /node-monstra/public/javascripts
+COPY public /node-monstra/public
 COPY views /node-monstra/views
 
 ENTRYPOINT [ "/bin/map-entry.sh" ]
