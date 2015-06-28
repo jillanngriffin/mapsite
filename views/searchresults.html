@@ -1,0 +1,210 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="">
+<!--<![endif]-->
+<head>
+<title>Management &amp; Accounting Professionals, Inc (MAP) </title>
+<meta name="description"
+	content="Accounting Done Differently"	/>
+<meta name="keywords"
+	content="accounting, accountant, management, loveland, ohio"	/>
+<meta http-equiv="author"
+	content="Jill Griffin" /> <!--jillgriffindesign.com-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="boilerplate.css" type="text/css">
+<link href="mapsite.css" rel="stylesheet" type="text/css">
+<link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+<!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+
+	jQuery(function($){
+		var openMenu = function() {
+			$('.responsive-menu').toggleClass('expand');
+			$('#maincontainer').toggleClass('dim');
+			setTimeout(function() {$('#maincontainer').on("click", closeMenu)}, 100);
+		};
+	
+		var closeMenu = function() {
+			$('.responsive-menu').toggleClass('expand');
+			$('#maincontainer').toggleClass('dim');
+			$('#maincontainer').off("click", closeMenu);
+		};
+		
+		 $( '.menu-btn' ).click(function(){
+			 openMenu();
+		 });
+		 
+		 $( '.closebutton' ).click(function(){
+			 closeMenu();
+		 });
+		 
+		 $('#mobile-search-icon').click(function() {
+			 $('.mobile-search').toggleClass('mobile-search-expand');
+			 $('#mobile-search-icon').toggleClass('mobile-search-button-hide');
+			 $('.searchmobile').focus();
+		 });
+		 
+		 $('.mobile-search-close').click(function() {
+			 $('.mobile-search').toggleClass('mobile-search-expand');
+			 $('#mobile-search-icon').toggleClass('mobile-search-button-hide');
+		 });
+		 
+		 $('#logomobile').click(function() {
+			 window.location.href = 'index.html';
+		 });
+		 
+		 $('#contactbtn').click(function() {
+			 window.location.href = 'contact.html';
+		 });
+		 
+		 $('#resourcesbtn').click(function() {
+			 window.location.href = 'resources.html';
+		 });
+		 
+		 $('#ourstorybtn').click(function() {
+			 window.location.href = 'ourstory.html';
+		 });
+		 
+	});
+</script>
+</head>
+<body>
+        <div class="responsive-menu"><!--begin responsive menu-->
+                    <div class="responsive-menu-close">
+                        <div class="closebutton">
+                        </div>
+                        <ul>
+                            <li><a href="Services.html">Services</a></li>
+                            <li><a href="resources.html">Resources</a></li>
+                            <li><a href="ourstory.html">Our Story</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="clientlogin.html">Client Login</a></li>
+                        </ul>
+                        <ul class="menu-contact">
+                            <li class="menuphone"><a href="tel:5137749600">Phone: 513.774.9600</a></li>
+                            <li class="menufax">Fax: 513.774.7820</li>
+                            <li class="menuemail"><a href="mailto:pgross@mapaccounting.com?">pgross@mapaccounting.com</a></li>
+                            <li class="menumail"> <a href="https://www.google.com/maps/place/411+W+Loveland+Ave,+Loveland,+OH+45140/@39.2686159,-84.2623978,17z/data=!3m1!4b1!4m2!3m1!1s0x8840f8ae8bfb01a5:0x95b2f75cf4e54549" target="_blank">411 W. Loveland Ave. #201<br>Loveland, OH 45140</a></li>
+                        </ul>
+                     </div>
+                 </div><!--end responsive menu-->
+
+	<div class="clearfix maincontainer">
+    		<header><!--begin desktop header-->
+            
+            <div class="mobile-nav"><!--mobile menu-->
+                      		<div id="logomobile">
+                      		</div>
+                            <div id="mobile-search-icon">
+                            </div>
+                            <div class="mobile-search"><!--mobile search-->
+                                <div class="mobile-search-close"><!--mobile search close-->
+                                </div>
+                                <input type="text" class="searchmobile">
+         					</div>
+                            <div class="menu-btn" id="menu-btn">
+                            </div>
+                      </div><!--mobile menu-->
+            
+              	<div id="headerrow" class="rowcontainer">
+                   <div id="logodesktop" class="clickable">
+                   	<a href="index.html"></a>
+                    </div>
+                    <div class="headercontent"><!--begin header content-->
+              
+                        <ul class="rowcontainer titlecontainer">
+                            <li><h4>Management & Accounting Professionals, Inc.</h4></li>
+                            <li><a href="clientlogin.html"><h6>Client Login</h6></a></li>
+                        </ul>
+                        <ul class="rowcontainer contactcontainer">
+                            <li class="desktopheaderphone"> <a href="#">513.774.9600</a></li>
+                            <li class="desktopheaderemail"><a href="mailto:pgross@mapaccounting.com?">pgross@mapaccounting.com</a></li>
+                            <li class="desktopheadermail"> <a href="https://www.google.com/maps/place/411+W+Loveland+Ave,+Loveland,+OH+45140/@39.2686159,-84.2623978,17z/data=!3m1!4b1!4m2!3m1!1s0x8840f8ae8bfb01a5:0x95b2f75cf4e54549" target="_blank">411 W. Loveland Ave. #201 <br>Loveland, OH 45140</a></li>
+                            <li><input type="text" class="searchdesktop"></li>
+                        </ul>
+                            <nav id="nav" role="navigation">
+                                <a href="#nav" title="Show navigation">Show navigation</a>
+                                <a href="#" title="Hide navigation">Hide navigation</a>
+                                <ul class="rowcontainer navcontainer">
+                                  <li><a href="#" aria-haspopup="true">Services</a>
+                                  	<ul>
+                                    	<li class="clickable">
+                                        	<a href="BusinessStructure.html"></a>
+                                            <p>Business Structure</p>
+                                        </li>
+                                        <li class="clickable">
+                                        	<a href="Bookkeeping.html"></a>
+                                        	<p>Bookkeeping</p>
+                                        </li>
+                                        <li class="clickable">
+                                        	<a href="TaxPreparation.html"></a>
+                                            <p>Tax Preparation</p>
+                                        </li>
+                                        <li class="clickable">
+                                        	<a href="Payroll.html"></a>
+                                        	<p>Payroll</p>
+                                        </li>
+                                        <li class="clickable">
+                                        	<a href="BusinessCoaching.html"></a>
+                                            <p>Business Coaching</p>
+                                        </li>
+                                    </ul>
+                                    </li>
+                                  <li id="resourcesbtn"><a href="resources.html">Resources</a></li>
+                                  <li id="ourstorybtn"><a href="ourstory.html">Our Story</a></li>
+                                  <li id="contactbtn"><a href="contact.html">Contact</a></li>
+                                </ul>
+                        </nav>
+                    </div><!--end header content-->
+                 </div><!-- end row container -->
+              </header><!--end desktop header-->
+              
+              <div id="structureUnderHeaderSecondary">
+                </div>
+               	
+                <section class="contentcontainer">
+                    	 <div class="searchcontainer">
+                            <ul>
+                                <li class="searchurl"><a href="#">urlgoeshere.com</a></li>
+                                <li class="storycopy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                                <li class="searchurl"><a href="#">urlgoeshere.com</a></li>
+                                <li class="storycopy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                                <li class="searchurl"><a href="#">urlgoeshere.com</a></li>
+                                <li class="storycopy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                            </ul>
+                         </div><!--end stories container-->
+                
+                  </section><!--end content container-->
+                  
+                  <p id="footertagline">Become Our Next Client!</p> 
+                   
+         	  <footer>
+              		<ul class="footercontent">
+                    	<li class="desktopfooterphone"> <h3>Phone: 513.774.9600</h3></li>
+                        <li class="desktopfooterfax"> <h3>Fax: 513.774.7820</h3></li>
+                        <li class="desktopfooteremail"><a href="mailto:pgross@mapaccounting.com?"><h3>pgross@mapaccounting.com</h3></a></li>
+                        <li class="desktopfootermail"> <a href="https://www.google.com/maps/place/411+W+Loveland+Ave,+Loveland,+OH+45140/@39.2686159,-84.2623978,17z/data=!3m1!4b1!4m2!3m1!1s0x8840f8ae8bfb01a5:0x95b2f75cf4e54549" target="_blank"><h3>411 W. Loveland Ave. #201</h3></a></li>
+                    </ul>
+                  <div class="rowcontainer subfooter">
+                  <h2> © Copyright 2015 Management & Accounting Professionals, Inc. - MAP </h2>
+                  </div>
+	         </footer>
+</div>
+</body>
+</html>
