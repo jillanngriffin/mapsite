@@ -189,7 +189,7 @@ Do the following if you're using your customized build of modernizr (http://www.
                             <ul>
 															{% for hit in hits %}
 															<li class="searchurl"><a href="/{{ hit.document.slug }}">{{ hit.document.title }}</a></li>
-															<li class="storycopy">{% raw %}{{ hit.document.content }}{% endraw %}</li>
+															<li class="storycopy">{{ hit.document.content|striptags }}</li>
 															{% endfor %}
                             </ul>
                          </div><!--end stories container-->

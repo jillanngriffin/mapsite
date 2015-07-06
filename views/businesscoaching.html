@@ -128,7 +128,7 @@
                                 <li class="ServicesSubHeader">{{ metatitle }}</li>
                                 <li class="ServicesCopy">{{ description }}<br><br>
                                     <ul class="ServicesBullets">
-																			{% raw %}{{ content }}{% endraw %}
+																			{{ content|safe }}
                                     </ul>
 								</li>
                              </ul>

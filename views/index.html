@@ -209,7 +209,7 @@
                                 <h9>{{ description }}</h9>
                                 </div>
                                 <div class="welcomeparagraph">
-																	{% autoescape false %}{{ content }}{% endautoescape %}
+																	{{ content|safe }}
 																</div>
                  		 </div><!--end intro-->
 

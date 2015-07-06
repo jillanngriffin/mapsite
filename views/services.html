@@ -175,7 +175,7 @@
                                 <li class="ServicesCopy">{{ subpages['businessstructure'].description }}<br></li>
                             </ul>
                             <ul class="ServicesBullets">
-															{% raw %}{{ subpages['businessstructure'].content }}{% endraw %}
+															{{ subpages['businessstructure'].content|safe }}
                              </ul><!--end business structure-->
 
                              <ul id="bookkeeping"><!--begin bookkeeping-->
@@ -184,7 +184,7 @@
                                 <li class="ServicesCopy">{{ subpages['bookkeeping'].description }}<br></li>
                              </ul>
                             <ul class="ServicesBullets">
-															{% raw %}{{ subpages['bookkeeping'].content }}{% endraw %}
+															{{ subpages['bookkeeping'].content|safe }}
                             </ul><!--end bookkeeping-->
 
                         	<ul id="taxprep"><!--begin tax prep-->
@@ -193,7 +193,7 @@
                                 <li class="ServicesCopy">{{ subpages['taxprep'].description }}<br></li>
                             </ul>
                             <ul class="ServicesBullets">
-															{% raw %}{{ subpages['taxprep'].content }}{% endraw %}
+															{{ subpages['taxprep'].content|safe }}
                             </ul><!--end tax prep-->
 
                          	<ul id="payroll"><!--begin payroll-->
@@ -202,7 +202,7 @@
                                 <li class="ServicesCopy">{{ subpages['payroll'].content }}<br></li>
                             </ul>
                             <ul class="ServicesBullets">
-															{% raw %}{{ subpages['payroll'].content }}{% endraw %}
+															{{ subpages['payroll'].content|safe }}
                              </ul><!--end payroll-->
 
                             <ul id="businesscoaching"><!--begin Business Coaching-->
@@ -211,7 +211,7 @@
                                 <li class="ServicesCopy">{{ subpages['businesscoaching'].description }}<br></li>
                             </ul>
                             <ul class="ServicesBullets">
-															{% raw %}{{ subpages['businesscoaching'].content }}{% endraw %}
+															{{ subpages['businesscoaching'].content|safe }}
                             </ul><!--end business coaching-->
                 </div><!--end mobile services-->
 
