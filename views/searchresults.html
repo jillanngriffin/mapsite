@@ -23,43 +23,43 @@
 			$('#maincontainer').toggleClass('dim');
 			setTimeout(function() {$('#maincontainer').on("click", closeMenu)}, 100);
 		};
-	
+
 		var closeMenu = function() {
 			$('.responsive-menu').toggleClass('expand');
 			$('#maincontainer').toggleClass('dim');
 			$('#maincontainer').off("click", closeMenu);
 		};
-		
+
 		 $( '.menu-btn' ).click(function(){
 			 openMenu();
 		 });
-		 
+
 		 $( '.closebutton' ).click(function(){
 			 closeMenu();
 		 });
-		 
+
 		 $('#mobile-search-icon').click(function() {
 			 $('.searcharea').toggleClass('mobile-search-expand');
 			 $('#mobile-search-icon').toggleClass('mobile-search-button-hide');
 			 $('.searchmobile').focus();
 		 });
-		 
+
 		 $('#logomobile').click(function() {
 			 window.location.href = 'index.html';
 		 });
-		 
+
 		 $('#contactbtn').click(function() {
 			 window.location.href = 'contact.html';
 		 });
-		 
+
 		 $('#resourcesbtn').click(function() {
 			 window.location.href = 'resources.html';
 		 });
-		 
+
 		 $('#ourstorybtn').click(function() {
 			 window.location.href = 'ourstory.html';
 		 });
-		 
+
 	});
 </script>
 </head>
@@ -69,7 +69,7 @@
                         <div class="closebutton">
                         </div>
                         <ul class="responsive-menu-btns">
-                            <li><a href="Services.html">Services</a></li>
+                            <li><a href="services.html">Services</a></li>
                             <li><a href="resources.html">Resources</a></li>
                             <li><a href="ourstory.html">Our Story</a></li>
                             <li><a href="contact.html">Contact</a></li>
@@ -86,7 +86,7 @@
 
 	<div class="clearfix maincontainer">
     		<header><!--begin desktop header-->
-            
+
             <div class="mobile-nav"><!--mobile menu-->
                       		<div class="menuarea">
                                 <div id="logomobile">
@@ -99,16 +99,19 @@
                                 </div>
                             </div>
                             <div class="searcharea">
-                                    <input type="text" class="searchmobile">
+																<form method="get" action="/search">
+                                    <input type="text" name="q" class="searchmobile">
+																		<input type="hidden" name="tag" value="mobile">
+																</form>
                             </div>
                       </div><!--mobile menu-->
-            
+
               	<div id="headerrow" class="rowcontainer">
                    <div id="logodesktop" class="clickable">
                    	<a href="index.html"></a>
                     </div>
                     <div class="headercontent"><!--begin header content-->
-              
+
                         <ul class="rowcontainer titlecontainer">
                             <li><h4>Management & Accounting Professionals, Inc.</h4></li>
                             <li><a href="clientlogin.html"><h6>Client Login</h6></a></li>
@@ -117,7 +120,10 @@
                             <li class="desktopheaderphone"> <a href="#">513.774.9600</a></li>
                             <li class="desktopheaderemail"><a href="mailto:pgross@mapaccounting.com?">pgross@mapaccounting.com</a></li>
                             <li class="desktopheadermail"> <a href="https://www.google.com/maps/place/411+W+Loveland+Ave,+Loveland,+OH+45140/@39.2686159,-84.2623978,17z/data=!3m1!4b1!4m2!3m1!1s0x8840f8ae8bfb01a5:0x95b2f75cf4e54549" target="_blank">411 W. Loveland Ave. #201 <br>Loveland, OH 45140</a></li>
-                            <li><input type="text" class="searchdesktop"></li>
+                            <li><form method="get" action="/search">
+																    <input type="text" name="q" class="searchdesktop">
+																    <input type="hidden" name="tag" value="desktop">
+																</form></li>
                         </ul>
                             <nav id="nav" role="navigation">
                                 <a href="#nav" title="Show navigation">Show navigation</a>
@@ -126,23 +132,23 @@
                                   <li><a href="#" aria-haspopup="true">Services</a>
                                   	<ul>
                                     	<li class="clickable">
-                                        	<a href="BusinessStructure.html"></a>
+                                        	<a href="businessstructure.html"></a>
                                             <p>Business Structure</p>
                                         </li>
                                         <li class="clickable">
-                                        	<a href="Bookkeeping.html"></a>
+                                        	<a href="bookkeeping.html"></a>
                                         	<p>Bookkeeping</p>
                                         </li>
                                         <li class="clickable">
-                                        	<a href="TaxPreparation.html"></a>
+                                        	<a href="taxprep.html"></a>
                                             <p>Tax Preparation</p>
                                         </li>
                                         <li class="clickable">
-                                        	<a href="Payroll.html"></a>
+                                        	<a href="payroll.html"></a>
                                         	<p>Payroll</p>
                                         </li>
                                         <li class="clickable">
-                                        	<a href="BusinessCoaching.html"></a>
+                                        	<a href="businesscoaching.html"></a>
                                             <p>Business Coaching</p>
                                         </li>
                                     </ul>
@@ -155,10 +161,10 @@
                     </div><!--end header content-->
                  </div><!-- end row container -->
               </header><!--end desktop header-->
-              
+
               <div id="underHeader">
                 </div>
-               	
+
                 <section class="contentcontainer">
                     	 <div class="searchcontainer">
                             <ul>
@@ -170,11 +176,11 @@
                                 <li class="storycopy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
                             </ul>
                          </div><!--end stories container-->
-                
+
                   </section><!--end content container-->
-                  
+
                   <div class="footercontainer">
-                   <p id="footertagline">Become Our Next Client!</p>   
+                   <p id="footertagline">Become Our Next Client!</p>
               <footer>
               		<ul class="footercontent">
                     	<li class="desktopfooterphone"><a href="tel:5137749600"><h3>Phone: 513.774.9600</h3></a></li>

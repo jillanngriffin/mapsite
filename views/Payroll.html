@@ -18,36 +18,36 @@
 <script type="text/javascript">
 
 	jQuery(function($){
-		 
+
 		 $('#logomobile').click(function() {
 			 window.location.href = 'index.html';
 		 });
-		 
+
 		$('#contactbtn').click(function() {
 			 window.location.href = 'contact.html';
 		 });
-		 
+
 		 $('#resourcesbtn').click(function() {
 			 window.location.href = 'resources.html';
 		 });
-		 
+
 		 $('#ourstorybtn').click(function() {
 			 window.location.href = 'ourstory.html';
 		 });
-		 
+
 	});
 </script>
 </head>
 <body>
 	<div class="clearfix maincontainer">
-    
+
               <header>
               	<div id="headerrow" class="rowcontainer">
                    <div id="logodesktop" class="clickable">
                    	<a href="index.html"></a>
                     </div>
                     <div class="headercontent"><!--begin header content-->
-              
+
                         <ul class="rowcontainer titlecontainer">
                             <li><h4>Management & Accounting Professionals, Inc.</h4></li>
                             <li><a href="clientlogin.html"><h6>Client Login</h6></a></li>
@@ -56,7 +56,10 @@
                             <li class="desktopheaderphone"> <a href="#">513.774.9600</a></li>
                             <li class="desktopheaderemail"><a href="mailto:pgross@mapaccounting.com?">pgross@mapaccounting.com</a></li>
                             <li class="desktopheadermail"> <a href="https://www.google.com/maps/place/411+W+Loveland+Ave,+Loveland,+OH+45140/@39.2686159,-84.2623978,17z/data=!3m1!4b1!4m2!3m1!1s0x8840f8ae8bfb01a5:0x95b2f75cf4e54549" target="_blank">411 W. Loveland Ave. #201 <br>Loveland, OH 45140</a></li>
-                            <li><input type="text" class="searchdesktop"></li>
+                            <li><form method="get" action="/search">
+																    <input type="text" name="q" class="searchdesktop">
+																    <input type="hidden" name="tag" value="desktop">
+																</form></li>
                         </ul>
                             <nav id="nav" role="navigation">
                                 <a href="#nav" title="Show navigation">Show navigation</a>
@@ -65,23 +68,23 @@
                                   <li class="selectednav"><a href="#" aria-haspopup="true">Services</a>
                                   	<ul>
                                     	<li class="clickable">
-                                        	<a href="BusinessStructure.html"></a>
+                                        	<a href="businessstructure.html"></a>
                                             <p>Business Structure</p>
                                         </li>
                                         <li class="clickable">
-                                        	<a href="Bookkeeping.html"></a>
+                                        	<a href="bookkeeping.html"></a>
                                         	<p>Bookkeeping</p>
                                         </li>
                                         <li class="clickable">
-                                        	<a href="TaxPreparation.html"></a>
+                                        	<a href="taxprep.html"></a>
                                             <p>Tax Preparation</p>
                                         </li>
                                         <li class="clickable">
-                                        	<a href="Payroll.html"></a>
+                                        	<a href="payroll.html"></a>
                                         	<p>Payroll</p>
                                         </li>
                                         <li class="clickable">
-                                        	<a href="BusinessCoaching.html"></a>
+                                        	<a href="businesscoaching.html"></a>
                                             <p>Business Coaching</p>
                                         </li>
                                     </ul>
@@ -94,58 +97,49 @@
                     </div><!--end header content-->
                  </div><!-- end row container -->
               </header><!--end header-->
-              
+
               	<div id="structureUnderHeaderSecondary">
                 </div>
-               	
+
                 <section class="contentcontainer"><!--begin steppingstones-->
                     	 <div id="steppingstones">
                                 <div id="steppingstonebusinessstructure" class="clickable">
-                                <a href="BusinessStructure.html"></a>
+                                <a href="businessstructure.html"></a>
                                 </div>
                                 <div id="steppingstonebookkeeping" class="clickable">
-                                <a href="Bookkeeping.html"></a>
+                                <a href="bookkeeping.html"></a>
                                 </div>
                                 <div id="steppingstonetaxprep" class="clickable">
-                                <a href="TaxPreparation.html"></a>
+                                <a href="taxprep.html"></a>
                                 </div>
                                 <div id="steppingstonepayroll" class="clickable">
-                                <a href="Payroll.html"></a>
+                                <a href="payroll.html"></a>
                                 </div>
                                 <div id="steppingstonebusinesscoaching" class="clickable">
-                                <a href="BusinessCoaching.html"></a>
+                                <a href="businesscoaching.html"></a>
                             </div>
                          </div><!--end steppingstones-->
-                         
+
                          <div class="ServicesIcon">
                          	<img src="images/payrollicon.svg" alt="payroll">
                          </div>
                          	<div class="ServicesContentContainer">
                              <ul>
-                                <li class="ServicesHeader">Payroll</li>
-                                <li class="ServicesSubHeader">Personalized Service with Complete, Cost-Effective Solutions</li>
-                                <li class="ServicesCopy">We do payroll so you don’t have to — on time, every time, quickly and accurately. MAP has a small business heart and soul, with large-company resources. Change the way you handle payroll, and focus on what you do best — growing your business. MAP payroll services provide:<br><br>
+                                <li class="ServicesHeader">{{ title }}</li>
+                                <li class="ServicesSubHeader">{{ metatitle }}</li>
+                                <li class="ServicesCopy">{{ description }}<br><br>
                                     <ul class="ServicesBullets">
-                                        <li>Cost-effective outsourcing, time savings and is worry-free</li> 
-                                        <li>No hidden charges or fees</li>
-                                        <li>Friendly and familiar payroll processor</li>
-                                        <li>Timely and accurate electronic payroll tax filings</li>
-                                        <li>Comprehensive payroll reports</li>
-                                        <li>General ledger exporting</li>
-                                        <li>Year end processing; W2s and W3s, tax reconciliations</li>
-                                        <li>Direct deposit and pay cards</li>
-                                        <li>Online access</li>
-                                        <li>Mobile app for employees</li>
+                                        {{ content }}
                                     </ul>
 								</li>
                              </ul>
                             </div><!--end Services Container-->
-                         
-                           
+
+
                   </section><!--end content container-->
-                  
+
                   <div class="footercontainer">
-                   <p id="footertagline">Become Our Next Client!</p>   
+                   <p id="footertagline">Become Our Next Client!</p>
               <footer>
               		<ul class="footercontent">
                     	<li class="desktopfooterphone"><a href="tel:5137749600"><h3>Phone: 513.774.9600</h3></a></li>

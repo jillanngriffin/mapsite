@@ -18,48 +18,48 @@
 <script type="text/javascript">
 
 	jQuery(function($){
-		
+
 		var openMenu = function() {
 			$('.responsive-menu').toggleClass('expand');
 			$('#maincontainer').toggleClass('dim');
 			setTimeout(function() {$('#maincontainer').on("click", closeMenu)}, 100);
 		};
-	
+
 		var closeMenu = function() {
 			$('.responsive-menu').toggleClass('expand');
 			$('#maincontainer').toggleClass('dim');
 			$('#maincontainer').off("click", closeMenu);
 		};
-		
+
 		 $( '.menu-btn' ).click(function(){
 			 openMenu();
 		 });
-		 
+
 		 $( '.closebutton' ).click(function(){
 			 closeMenu();
 		 });
-		 
+
 		 $('#mobile-search-icon').click(function() {
 			 $('.searcharea').toggleClass('mobile-search-expand');
 			 $('#mobile-search-icon').toggleClass('mobile-search-button-hide');
 			 $('.searchmobile').focus();
 		 });
-		 
+
 		 $('#logomobile').click(function() {
 			 window.location.href = 'index.html';
 		 });
-		 
+
 		  $('#contactbtn').click(function() {
 			 window.location.href = 'contact.html';
 		 });
-		 
+
 		 $('#resourcesbtn').click(function() {
 			 window.location.href = 'resources.html';
 		 });
-		 
+
 		 $('#ourstorybtn').click(function() {
 			 window.location.href = 'ourstory.html';
-		 });	 
+		 });
 	});
 </script>
 </head>
@@ -69,7 +69,7 @@
                 <div class="closebutton">
                 </div>
                 <ul class="responsive-menu-btns">
-                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="services.html">Services</a></li>
                     <li><a href="resources.html">Resources</a></li>
                     <li><a href="ourstory.html">Our Story</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -83,10 +83,10 @@
                 </ul>
              </div>
          </div><!--end responsive menu-->
-    
+
     <div class="clearfix maincontainer">
               <header><!--begin desktop header-->
-              
+
                       <div class="mobile-nav"><!--mobile menu-->
                       		<div class="menuarea">
                                 <div id="logomobile">
@@ -99,15 +99,18 @@
                                 </div>
                             </div>
                             <div class="searcharea">
-                                    <input type="text" class="searchmobile">
+																<form method="get" action="/search">
+                                    <input type="text" name="q" class="searchmobile">
+																		<input type="hidden" name="tag" value="mobile">
+																</form>
                             </div>
                       </div><!--mobile menu-->
-                      
+
               	<div id="headerrow" class="rowcontainer">
                    <div id="logodesktop">
                     </div>
                     <div class="headercontent"><!--begin header content-->
-              
+
                         <ul class="rowcontainer titlecontainer">
                             <li><h4>Management & Accounting Professionals, Inc.</h4></li>
                             <li><a href="clientlogin.html"><h6>Client Login</h6></a></li>
@@ -116,7 +119,10 @@
                             <li class="desktopheaderphone"><a href="tel:5137749600">513.774.9600</a></li>
                             <li class="desktopheaderemail"> <a href="mailto:pgross@mapaccounting.com">pgross@mapaccounting.com</a></li>
                             <li class="desktopheadermail"> <a href="https://www.google.com/maps/place/411+W+Loveland+Ave,+Loveland,+OH+45140/@39.2686159,-84.2623978,17z/data=!3m1!4b1!4m2!3m1!1s0x8840f8ae8bfb01a5:0x95b2f75cf4e54549" target="_blank">411 W. Loveland Ave. #201 <br>Loveland, OH 45140</a></li>
-                            <li><input type="text" class="searchdesktop"></li>
+                            <li><form method="get" action="/search">
+                                    <input type="text" name="q" class="searchdesktop">
+																		<input type="hidden" name="tag" value="desktop">
+																</form></li>
                         </ul>
                             <nav id="nav" role="navigation">
                                 <a href="#nav" title="Show navigation">Show navigation</a>
@@ -125,23 +131,23 @@
                                   <li><a href="#" aria-haspopup="true">Services</a>
                                   	<ul>
                                     	<li class="clickable">
-                                        	<a href="BusinessStructure.html"></a>
+                                        	<a href="businessstructure.html"></a>
                                             <p>Business Structure</p>
                                         </li>
                                         <li class="clickable">
-                                        	<a href="Bookkeeping.html"></a>
+                                        	<a href="bookkeeping.html"></a>
                                         	<p>Bookkeeping</p>
                                         </li>
                                         <li class="clickable">
-                                        	<a href="TaxPreparation.html"></a>
+                                        	<a href="taxprep.html"></a>
                                             <p>Tax Preparation</p>
                                         </li>
                                         <li class="clickable">
-                                        	<a href="Payroll.html"></a>
+                                        	<a href="payroll.html"></a>
                                         	<p>Payroll</p>
                                         </li>
                                         <li class="clickable">
-                                        	<a href="BusinessCoaching.html"></a>
+                                        	<a href="businesscoaching.html"></a>
                                             <p>Business Coaching</p>
                                         </li>
                                     </ul>
@@ -154,59 +160,59 @@
                     </div><!--end header content-->
                  </div><!-- end row container -->
               </header><!--end desktop header-->
-              
+
               	<div id="underHeader">
                 </div>
-      
+
       			<div id="hero"><!--begin garden hero-->
                 	<img id="desktophero" src="images/gardenphoto.jpg" alt="Garden Photo">
                     <img id="mobilehero" src="images/gardenphotomobile.jpg" alt="Garden Photo">
                 </div><!--end garden hero-->
-               	
+
                 <div class="contentcontainer"><!--begin content container-->
                      <div id="pathscolumn" class="contentcolumn" >
                           <div class="contentheader">
                             <h5>PATH TO SUCCESS</h5>
                           </div>
-                          
+
                           <div class="pathlinks"><!--begin path links-->
                             <ul>
-                                <li class="pathsbusinessstructure"> 
-                                	<a class="desktoppathlink" href="BusinessStructure.html">Business Structure</a>
-                                	<a class="mobilepathlink" href="Services.html#businessstructure">Business Structure</a>
+                                <li class="pathsbusinessstructure">
+                                	<a class="desktoppathlink" href="businessstructure.html">Business Structure</a>
+                                	<a class="mobilepathlink" href="services.html#businessstructure">Business Structure</a>
                                 </li>
-                                <li class="pathsbookkeeping"> 
-                                	<a class="desktoppathlink" href="Bookkeeping.html">Bookkeeping</a>
-                                	<a class="mobilepathlink" href="Services.html#bookkeeping">Bookkeeping</a>
+                                <li class="pathsbookkeeping">
+                                	<a class="desktoppathlink" href="bookkeeping.html">Bookkeeping</a>
+                                	<a class="mobilepathlink" href="services.html#bookkeeping">Bookkeeping</a>
                                 </li>
                                 <li class="pathstaxprep">
-                                   <a class="desktoppathlink" href="TaxPreparation.html">Tax Prep. &amp; Planning</a>
-                                   <a class="mobilepathlink" href="Services.html#taxprep">Tax Prep. &amp; Planning</a>
+                                   <a class="desktoppathlink" href="taxprep.html">Tax Prep. &amp; Planning</a>
+                                   <a class="mobilepathlink" href="services.html#taxprep">Tax Prep. &amp; Planning</a>
                                 </li>
                                 <li class="pathspayroll">
-                                	<a class="desktoppathlink" href="Payroll.html">Payroll</a>
-                                    <a class="mobilepathlink" href="Services.html#payroll">Payroll</a>
+                                	<a class="desktoppathlink" href="payroll.html">Payroll</a>
+                                    <a class="mobilepathlink" href="services.html#payroll">Payroll</a>
                                 </li>
                                 <li class="pathsbusinesscoach">
-                                <a class="desktoppathlink" href="BusinessCoaching.html">Business Coaching</a>
-                                <a class="mobilepathlink" href="Services.html#businesscoaching">Business Coaching</a>
+                                <a class="desktoppathlink" href="businesscoaching.html">Business Coaching</a>
+                                <a class="mobilepathlink" href="services.html#businesscoaching">Business Coaching</a>
                                 </li>
                             </ul>
                           </div><!--end path links-->
-                          
-                          
+
+
                      </div><!--end content column-->
-                          
+
                           <div class="intro"><!--begin intro-->
-                                <div class="welcome">Welcome to MAP!</div>
+                                <div class="welcome">{{ title }}</div>
                                 <div id="tagline">
-                                <h9>Accounting Done Differently</h9>
+                                <h9>{{ description }}</h9>
                                 </div>
                                 <div class="welcomeparagraph">
-                                At Management &amp; Accounting Professionals, Inc. (MAP) we focus on the entrepreneur. Recognizing accounting is a critical stepping stone to success, we cover all the basics. We also recommend the best corporate structure for your business, while coaching you at every level. From accounting services to entrepreneurial business structure—and every important decision along the way — MAP does accounting differently.
-                                </div>
+                                		{{ content }}
+																</div>
                  		 </div><!--end intro-->
-                 
+
                      <div id="clientlogin" class="contentcolumn"><!--begin client login-->
                        <div class="contentheader">
                           		<h5>CLIENT LOGIN</h5>
@@ -223,11 +229,11 @@
                                     </div>
 					 </div><!--end client login-->
 
-                     
+
                   </div><!--end content container-->
-                  
+
        		<div class="footercontainer">
-                   <p id="footertagline">Become Our Next Client!</p>   
+                   <p id="footertagline">Become Our Next Client!</p>
               <footer>
               		<ul class="footercontent">
                     	<li class="desktopfooterphone"><a href="tel:5137749600"><h3>Phone: 513.774.9600</h3></a></li>

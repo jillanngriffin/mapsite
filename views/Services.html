@@ -18,49 +18,49 @@
 <script type="text/javascript">
 
 	jQuery(function($){
-		
+
 		var openMenu = function() {
 			$('.responsive-menu').toggleClass('expand');
 			$('#maincontainer').toggleClass('dim');
 			setTimeout(function() {$('#maincontainer').on("click", closeMenu)}, 100);
 		};
-	
+
 		var closeMenu = function() {
 			$('.responsive-menu').toggleClass('expand');
 			$('#maincontainer').toggleClass('dim');
 			$('#maincontainer').off("click", closeMenu);
 		};
-		
+
 		 $( '.menu-btn' ).click(function(){
 			 openMenu();
 		 });
-		 
+
 		 $( '.closebutton' ).click(function(){
 			 closeMenu();
 		 });
-		 
+
 		 $('#mobile-search-icon').click(function() {
 			 $('.searcharea').toggleClass('mobile-search-expand');
 			 $('#mobile-search-icon').toggleClass('mobile-search-button-hide');
 			 $('.searchmobile').focus();
 		 });
-		 
+
 		 $('#logomobile').click(function() {
 			 window.location.href = 'index.html';
 		 });
-		 
+
 		$('#contactbtn').click(function() {
 			 window.location.href = 'contact.html';
 		 });
-		 
+
 		 $('#resourcesbtn').click(function() {
 			 window.location.href = 'resources.html';
 		 });
-		 
+
 		 $('#ourstorybtn').click(function() {
 			 window.location.href = 'ourstory.html';
 		 });
-		 
+
 	});
 </script>
 </head>
@@ -85,10 +85,10 @@
                 </ul>
              </div>
          </div><!--end responsive menu-->
-    
+
     <div class="clearfix maincontainer">
               <header><!--begin desktop header-->
-              
+
                       <div class="mobile-nav"><!--mobile menu-->
                       		<div class="menuarea">
                                 <div id="logomobile">
@@ -101,17 +101,20 @@
                                 </div>
                             </div>
                             <div class="searcharea">
-                                    <input type="text" class="searchmobile">
+																<form method="get" action="/search">
+                                    <input type="text" name="q" class="searchmobile">
+																		<input type="hidden" name="tag" value="mobile">
+																</form>
                             </div>
                       </div><!--mobile menu-->
-              
-              
+
+
               	<div id="headerrow" class="rowcontainer">
                        <div id="logodesktop" class="clickable">
                    		<a href="index.html"></a>
                         </div>
                     <div class="headercontent"><!--begin header content-->
-              
+
                         <ul class="rowcontainer titlecontainer">
                             <li><h4>Management & Accounting Professionals, Inc.</h4></li>
                             <li><h6>Client Login</h6></li>
@@ -120,7 +123,10 @@
                             <li class="desktopheaderphone"><a href="tel:5137749600">513.774.9600</a></li>
                             <li class="desktopheaderemail"> <a href="mailto:pgross@mapaccounting.com">pgross@mapaccounting.com</a></li>
                             <li class="desktopheadermail"> <a href="https://www.google.com/maps/place/411+W+Loveland+Ave,+Loveland,+OH+45140/@39.2686159,-84.2623978,17z/data=!3m1!4b1!4m2!3m1!1s0x8840f8ae8bfb01a5:0x95b2f75cf4e54549" target="_blank">411 W. Loveland Ave. #201 <br>Loveland, OH 45140</a></li>
-                            <li><input type="text" class="searchdesktop"></li>
+                            <li><form method="get" action="/search">
+																    <input type="text" name="q" class="searchdesktop">
+																    <input type="hidden" name="tag" value="desktop">
+																</form></li>
                         </ul>
                             <nav id="nav" role="navigation">
                                 <a href="#nav" title="Show navigation">Show navigation</a>
@@ -129,23 +135,23 @@
                                   <li><a href="#" aria-haspopup="true">Services</a>
                                   	<ul>
                                     	<li class="clickable">
-                                        	<a href="BusinessStructure.html"></a>
+                                        	<a href="businessstructure.html"></a>
                                             <p>Business Structure</p>
                                         </li>
                                         <li class="clickable">
-                                        	<a href="Bookkeeping.html"></a>
+                                        	<a href="bookkeeping.html"></a>
                                         	<p>Bookkeeping</p>
                                         </li>
                                         <li class="clickable">
-                                        	<a href="TaxPreparation.html"></a>
+                                        	<a href="taxprep.html"></a>
                                             <p>Tax Preparation</p>
                                         </li>
                                         <li class="clickable">
-                                        	<a href="Payroll.html"></a>
+                                        	<a href="payroll.html"></a>
                                         	<p>Payroll</p>
                                         </li>
                                         <li class="clickable">
-                                        	<a href="BusinessCoaching.html"></a>
+                                        	<a href="businesscoaching.html"></a>
                                             <p>Business Coaching</p>
                                         </li>
                                     </ul>
@@ -158,79 +164,59 @@
                     </div><!--end header content-->
                  </div><!-- end row container -->
               </header><!--end desktop header-->
-             
+
               	<div id="underHeader">
                 </div>
-      
+
       			<div class="contentcolumn contentcontainer mobile-services-container"><!--begin mobile services-->
                     		<ul id="businessstructure"><!--begin business structure-->
-                                <li class="mobile-business-structure ServicesHeader">Business Structure</li>
-                                <li class="ServicesSubHeader">Set Your Business up Correctly, the First Time</li>
-                                <li class="ServicesCopy">Poor business structure can lead to tax and cash flow problems. Most small businesses file their earnings as a sole proprietorship. While this is the easiest structure to set up, it’s also the most unfavorable tax structure. In evaluating your business structure, we can:<br></li>
+                                <li class="mobile-business-structure ServicesHeader">{{ subpages['businessstructure'].title }}</li>
+                                <li class="ServicesSubHeader">{{ subpages['businessstructure'].metatitle }}</li>
+                                <li class="ServicesCopy">{{ subpages['businessstructure'].description }}<br></li>
                             </ul>
                             <ul class="ServicesBullets">
-                                        <li>Review your prior year tax return, using our propriety system, to analyze potential tax savings</li> 
-                                        <li>Potentially save your company, on average, @$9,000 in a given tax year</li>
-                                        <li>File all paperwork for business structure conversion, including late elections for prior years </li>
-                                        <li>Coordinate a complete review, and process all compliance requirements</li>
+																{{ subpages['businessstructure'].content }}
                              </ul><!--end business structure-->
-                             
+
                              <ul id="bookkeeping"><!--begin bookkeeping-->
-                                <li class="mobile-bookkeeping ServicesHeader">Bookkeeping</li>
-                                <li class="ServicesSubHeader">Stop the Pain, Take a Proactive Approach</li>
-                                <li class="ServicesCopy">Is your current bookkeeping accurate and up-to-date? Do you have ready accessto current information? If not, turn over painful bookkeeping to MAP. Accurate record-keeping is essential to every successful business. Our bookkeeping services include<br></li>
+                                <li class="mobile-bookkeeping ServicesHeader">{{ subpages['bookkeeping'].title }}</li>
+                                <li class="ServicesSubHeader">{{ subpages['bookkeeping'].metatitle }}</li>
+                                <li class="ServicesCopy">{{ subpages['bookkeeping'].description }}<br></li>
                              </ul>
                             <ul class="ServicesBullets">
-                                        <li>QuickBooks™ installation / training / reviews</li> 
-                                        <li>Complete bookkeeping  review: monthly or quarterly financial statements</li>
-                                        <li>Full data entry of accounting receipts and reconciliation of bank statements</li>
-                                        <li>Budget / Cash flow preparation </li>
+																{{ subpages['bookkeeping'].content }}
                             </ul><!--end bookkeeping-->
-                        
+
                         	<ul id="taxprep"><!--begin tax prep-->
-                                <li class="mobile-taxprep ServicesHeader">Tax Preparation</li>
-                                <li class="ServicesSubHeader">Tax Preparation You can Count on – Convenient, Accurate and Affordable</li>
-                                <li class="ServicesCopy">We realize tax planning and preparation may not be on everyone’s “fun things to do” list. (Fortunately, it’s at the top of ours.) To minimize your tax burden andmaximize profit, a good tax plan is paramount. With MAP’s tax return preparation, you can count on:<br></li>
+                                <li class="mobile-taxprep ServicesHeader">{{ subpages['taxprep'].title }}</li>
+                                <li class="ServicesSubHeader">{{ subpages['taxprep'].metatitle }}</li>
+                                <li class="ServicesCopy">{{ subpages['taxprep'].description }}<br></li>
                             </ul>
                             <ul class="ServicesBullets">
-                                        <li>Quarterly tax review and planning</li> 
-                                        <li>Preparation of all types of returns – Individual, Corporate, Partnership, Not for Profit</li>
-                                        <li>Tax preparation includes Federal, State and Local filings</li>
-                                        <li>Electronic remittance</li>
+																{{ subpages['taxprep'].content }}
                             </ul><!--end tax prep-->
-                                    
+
                          	<ul id="payroll"><!--begin payroll-->
-                                <li class="mobile-payroll ServicesHeader">Payroll</li>
-                                <li class="ServicesSubHeader">Personalized Service with Complete, Cost-Effective Solutions</li>
-                                <li class="ServicesCopy">We do payroll so you don’t have to — on time, every time, quickly and accurately. MAP has a small business heart and soul, with large-company resources. Change the way you handle payroll, and focus on what you do best — growing your business. MAP payroll services provide:<br></li>
+                                <li class="mobile-payroll ServicesHeader">{{ subpages['payroll'].title }}</li>
+                                <li class="ServicesSubHeader">{{ subpages['payroll'].metatitle }}</li>
+                                <li class="ServicesCopy">{{ subpages['payroll'].content }}<br></li>
                             </ul>
                             <ul class="ServicesBullets">
-                                        <li>Cost-effective outsourcing, time savings and is worry-free</li> 
-                                        <li>No hidden charges or fees</li>
-                                        <li>Friendly and familiar payroll processor</li>
-                                        <li>Timely and accurate electronic payroll tax filings</li>
-                                        <li>Comprehensive payroll reports</li>
-                                        <li>General ledger exporting</li>
-                                        <li>Year end processing; W2s and W3s, tax reconciliations</li>
-                                        <li>Direct deposit and pay cards</li>
-                                        <li>Online access</li>
-                                        <li>Mobile app for employees</li>
+																{{ subpages['payroll'].content }}
                              </ul><!--end payroll-->
-                                    
+
                             <ul id="businesscoaching"><!--begin Business Coaching-->
-                                <li class="mobile-business-coaching ServicesHeader">Business Coaching</li>
-                                <li class="ServicesSubHeader">From One Entrepreneur to Another</li>
-                                <li class="ServicesCopy">Entrepreneurs typically go their own way. They build a business from their own great ideas. Over time, being independent and self-sufficient doesn’t always work to your advantage. MAP knows where entrepreneurs need to spend their time. In fact, that’s our coaching focus.<br><br>When we handle the details, you can concentrate on profitability. Coaching involves where you want to go and how to get there — not just where you’ve been. By design, MAP focuses on your needs and wants with:<br></li>
+                                <li class="mobile-business-coaching ServicesHeader">{{ subpages['businesscoaching'].title }}</li>
+                                <li class="ServicesSubHeader">{{ subpages['businesscoaching'].metatitle }}</li>
+                                <li class="ServicesCopy">{{ subpages['businesscoaching'].description }}<br></li>
                             </ul>
                             <ul class="ServicesBullets">
-                                        <li><strong>Evaluation.</strong> We provide an objective, third-party evaluation of your operation. Our knowledgeable coaching can quickly identify your strengths and weaknesses.</li> 
-                                        <li><strong>Implementation.</strong> As your sounding board, we can help organize from chaos and establish accountability.s</li>
-                                        <li><strong>Regular Review.</strong> Once you’re on the right track, regular reviews can keep you on the right path and open to unfolding opportunities.</li>
-                                    </ul><!--end business coaching-->
+																{{ subpages['businesscoaching'].content }}
+                            </ul><!--end business coaching-->
                 </div><!--end mobile services-->
-              
+
                    <div class="footercontainer">
-                   <p id="footertagline">Become Our Next Client!</p>   
+                   <p id="footertagline">Become Our Next Client!</p>
               <footer>
               		<ul class="footercontent">
                     	<li class="desktopfooterphone"><a href="tel:5137749600"><h3>Phone: 513.774.9600</h3></a></li>
