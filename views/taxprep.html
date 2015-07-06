@@ -125,14 +125,11 @@
                          </div>
                          	<div class="ServicesContentContainer">
                              <ul>
-                                <li class="ServicesHeader">Tax Preparation & Planning</li>
-                                <li class="ServicesSubHeader">Tax Preparation You can Count on – Convenient, Accurate and Affordable</li>
-                                <li class="ServicesCopy">We realize tax planning and preparation may not be on everyone’s “fun things to do” list. (Fortunately, it’s at the top of ours.) To minimize your tax burden and maximize profit, a good tax plan is paramount. With MAP’s tax return preparation, you can count on:<br><br>
+                                <li class="ServicesHeader">{{ title }}</li>
+                                <li class="ServicesSubHeader">{{ metatitle }}</li>
+                                <li class="ServicesCopy">{{ description }}<br><br>
                                     <ul class="ServicesBullets">
-                                        <li>Quarterly tax review and planning</li>
-                                        <li>Preparation of all types of returns – Individual, Corporate, Partnership, Not for Profit</li>
-                                        <li>Tax preparation includes Federal, State and Local filings</li>
-                                        <li>Electronic remittance</li>
+																			{% raw %}{{ content }}{% endraw %}
                                     </ul>
 								</li>
                              </ul>
