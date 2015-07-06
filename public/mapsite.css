@@ -1,41 +1,38 @@
 @charset "UTF-8";
-/* Simple fluid media
-   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
-   http://www.alistapart.com/articles/fluid-images/ 
-*/
+
 img, object, embed, video {
 	max-width: 100%;
 }
-
-/* IE 6 does not support max-width so default to width 100% */
 .ie6 img {
 	width:100%;
 }
-
 @font-face {
 	font-family: 'EBGaramond';
 	src:url(EBGaramond12-Regular.ttf);
 }
-
 @font-face {
 	font-family: 'GaramondBold';
 	src:url(Garamond%20Bold.ttf);
 }
-
 @font-face {
 	font-family: 'Avenir';
 	src:url(Avenir-Roman.otf);
 }
-
 @font-face {
 	font-family: 'AvenirBold';
 	src:url(AvenirNextLTPro-Bold.otf);
 }
-
 html, body	{
 	margin:0;
 }
-
+html {
+	margin: 0;
+	padding: 0;
+}
+body {
+	width: 100%;
+	height: 100%;
+}
 input:focus	{
 	outline: 0;	
 }
@@ -46,7 +43,6 @@ input:focus	{
 	float: left;
 	display: block;
 }
-
 .fluidList {
     list-style:none;
     list-style-image:none;
@@ -98,22 +94,9 @@ h6	{
 	margin-top:4px;
 	margin-left: 214px;
 }
-h7	{
-	font-family:'Avenir', san-serif;
-	font-size:12px;
-	font-color:#404040;
-	line-height:1.8;
-}
-h8	{
-	font-family:'Avenir', san-serif;
-	text-align:center;
-	color:#ffffff;
-	font-size:10px;
-	font-weight:600;
-}
 h9	{
 	font-family:'GaramondBold', serif;
-	font-size:16px;
+	font-size:17px;
 	font-weight:900;
 }
 h10	{
@@ -128,9 +111,13 @@ h11	{
 	color: #684b1b;
 }
 
-
 /* Mobile Layout: 480px and below. */
   
+.maincontainer {
+	width:100%;
+	position:relative;
+	padding-bottom: 350px;
+}
 .gridContainer {
 	width: 100%;
 	clear: none;
@@ -143,9 +130,10 @@ h11	{
     display: none;
 }
 .contactformscontainer	{
-	display:flex;
 	display: -webkit-flex;
+	display:flex;
 	width:100%;
+	-webkit-justify-content:center;
 	justify-content:center;
 	padding-top:60px;
 }
@@ -163,9 +151,11 @@ h11	{
 	background-color:#dcdcdc;
 	font-family:'Avenir', san-serif;
 	color: #000;
-	font-size:12px;
+	font-size:14px;
 	padding-left:5px;
 	margin-bottom:10px;
+	outline:0;
+	border-radius:0;
 	border:0;
 }
 .tallcontactforms	{
@@ -174,11 +164,12 @@ h11	{
 	background-color:#dcdcdc;
 	font-family:'Avenir', san-serif;
 	color: #000;
-	font-size:12px;
+	font-size:14px;
 	padding-left:5px;
 	padding-top:5px;
 	margin-bottom:10px;
 	outline:0;
+	border-radius:0;
 	border:0;
 }
 *::-webkit-input-placeholder {
@@ -226,38 +217,28 @@ header  {
 	height:22px;
 	cursor:pointer;
 }
+.mobile-nav {
+	position:relative;
+}
 .mobile-search {
 	display: none;
 }
 .searchmobile	{
-	background-color:#db6ac4;
-	width:100%;
-	height:26px;
+	background-color:#ad3b8f;
+	width:90%;
+	height:24px;
 	border: 0px;
-	border-radius:30px;
 	padding-left:10px;
 	font-family:'Avenir', san-serif;
 	font-size:14px;
 	color:#ffffff;
 }
 .mobile-search-expand {
-	display: inline-block !important;
-	position: absolute;
-	right: 70px;
-	left: 105px;
-	top: 12px;
+	display: block !important;
 }
 .mobile-search-button-hide {
-	display: none !important;
-}
-.mobile-search-close {
-	background:url(images/searchclose.svg) no-repeat;
-	position: absolute;
+	background:url(images/searchclose.png) no-repeat !important;
 	width:20px;
-	height:20px;
-	right:0;
-	top: 4px;
-	cursor:pointer;
 }
 .menu-btn	{
 	background-image:url(images/hamburger.svg);
@@ -268,9 +249,20 @@ header  {
 	height:20px;
 	cursor:pointer;
 }
+.menuarea {
+	position: relative;
+	height: 52px;
+}
+.searcharea {
+	background-color:#ad3b8f;
+	height: 30px;
+	padding: 10px;
+	width:100%;
+	display: none;
+}
 .responsive-menu	{
 	display: none;
-	position:fixed;
+	position:absolute;
 	right:0;
 	z-index:3;
 	width:300px;
@@ -288,14 +280,14 @@ header  {
 	text-align:center;
 	line-height:60px;
 }
-.responsive-menu li:link	{
-	color:#ad3b8f;
-}
-.responsive-menu li:visited	{
+.responsive-menu-btns li a:active	{
 	color:#5c4279;
 }
-.responsive-menu li:hover	{
-	color:#ad3b8f;
+.responsive-menu-btns li a:link	{
+	color:#5c4279;
+}
+.responsive-menu-btns li a:visited	{
+	color:#5c4279;
 }
 .responsive-menu li:first-child	{
 	margin-top:20px;
@@ -318,7 +310,6 @@ header  {
 .dim {
   position: relative;
 }
-
 .dim:after {
   content: " ";
   z-index: 2;
@@ -382,9 +373,17 @@ header  {
 	text-align:center;
 	padding-bottom: 0px;
 }
+.welcomeparagraph	{
+	font-family:'Avenir', san-serif;
+	font-size:16px;
+	font-color:#404040;
+	text-align:left;
+	line-height:1.6;
+	margin-top:4px;
+}
 #tagline	{
 	text-align:center;
-	padding-top:4px;
+	padding-top:8px;
 	padding-bottom:10px;
 }
 .intro	{
@@ -394,16 +393,19 @@ header  {
 	margin-bottom: 30px;
 	padding: 0;
 }
+#pathscolumn {
+	width: 90%;
+}
 .pathlinks	{	
 	display: flex;
 	display: -webkit-flex;
+	-webkit-flex-direction: row;
 	flex-direction: row;
 	font-family:'Avenir', san-serif;
-	font-size:13px;
+	font-size:16px;
 	font-weight:500;
 	background-position:inherit;
 	background-size:auto;
-	
 }
 .pathlinks li {
 	padding-top:12px;
@@ -412,32 +414,54 @@ header  {
 	max-height:18px;
 	text-align:left center;
 }
-.desktopbusinessstructure {
+.pathlinks .desktoppathlink {
+	display: none;
+}
+.pathsbusinessstructure {
 	background:url(images/desktopbusinessstructure.svg) no-repeat;
 	background-size:20px;
 	background-position:left center;
 }
-.desktopbookkeeping {
+.pathsbookkeeping {
 	background:url(images/desktopbookkeeping.svg) no-repeat;
 	background-size:20px;
 	background-position:left center;
 }
-.desktoptaxprep {
+.pathstaxprep {
 	background:url(images/desktoptaxprep.svg) no-repeat;
 	background-size:20px;
 	background-position:left center;
 }
-.desktoppayroll {
+.pathspayroll {
 	background:url(images/desktoppayroll.svg) no-repeat;
 	background-size:20px;
 	background-position:left center;
-
 }
-.desktopbusinesscoach {
+.pathsbusinesscoach {
 	background:url(images/desktopbusinesscoach.svg) no-repeat;
 	background-size:20px;
 	background-position:left center;
-
+}
+/*Mobile Services Page Anchors*/
+#bookkeeping {
+	margin-top: -40px;
+	padding-top: 40px;
+}
+#businessstructure {
+	margin-top: -40px;
+	padding-top: 40px;
+}
+#taxprep {
+	margin-top: -40px;
+	padding-top: 40px;
+}
+#payroll {
+	margin-top: -40px;
+	padding-top: 40px;
+}
+#businesscoaching {
+	margin-top: -40px;
+	padding-top: 40px;
 }
 /* unvisited link */
 .pathlinks a:link {
@@ -452,21 +476,21 @@ header  {
     color: #ad3b8f;
 }
 .contentcontainer {
-	display: flex;
 	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction:column;
 	flex-direction:column;
+	-webkit-justify-content:center;
 	justify-content:center;
 	margin-top:15px;
 	margin-bottom: 10px;
 }
 .contentcolumn {
-	display:block;
+	display: block;
+	-webkit-flex-direction:column;
 	flex-direction:column;
-	display: -webkit-flex;
 	margin-left: 20px;
-	margin-right: 20px;
 }
-
 .contentheader	{
 	font-family:'AvenirBold', san-serif;
 	color:#565656;
@@ -474,57 +498,68 @@ header  {
 	padding-bottom:2px;
 }
 #clientlogin	{
+	width: 90%;
 	margin-top:20px;
 }
-
 #clientlogin ul li:first-child {
 	margin-bottom: 15px;
 }
 #clientloginpage	{
 	margin-top: 40px;
-	margin-bottom:40px;
+	margin-bottom:80px;
 }
 #clientloginpage ul li:first-child {
 	margin-bottom: 10px;
 }
-.loginbox	{
-	width:100%;
-	height:30px;
+  .loginbox	{
+	width:94%;
+	height:36px;
 	background-color:#dcdcdc;
 	font-family:'Avenir', san-serif;
 	color: #000;
-	font-size:12px;
+	font-size:14px;
 	padding-left:5px;
-	margin-right:20px;
+	border-radius:0;
 	border:0;
 }
 .loginbutton	{
+	font-family:'Avenir', san-serif;
+	color:#ffffff;
+	font-size:12px;
+	font-weight:600;
+	line-height:2.3;
 	background-color:#ad3b8f;
 	margin-top:20px;
 	border-radius:3px;
-	height: 24px;
+	height: 30px;
 	text-align:center;
 	padding-top:2px;
-	width:60px;
-	margin-bottom:10px;
+	width:70px;
+	margin-bottom:8px;
 }
 .forgotpassword	{
 	font-family:'Avenir', san-serif;
-	font-size:10px;
+	font-size:14px;
 	color:#b9b9b9;
-	float:right;
-	margin-bottom:10px;
+	float:left;
+	margin-bottom:20px;
 }
 .shortforgotpassword	{
 	font-family:'Avenir', san-serif;
-	font-size:10px;
+	font-size:11px;
 	color:#b9b9b9;
-	float:right;
+	float:left;
 	margin-top:-35px;
+}
+.footercontainer {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom:0;
 }
 #footertagline	{
 	display:block;
-	margin-bottom:-9px;
+	margin-bottom:-6px;
 	margin-left:5%;
 	padding: 0px;
 	font-size:24px;
@@ -557,10 +592,12 @@ footer  {
 	background-size:20px;
 }
 .footercontent	{
-	justify-content:left;
-	display: flex;
 	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction:column;
 	flex-direction:column;
+	-webkit-justify-content:left;
+	justify-content:left;
 	align-items:left;
 	margin-left:10px;
 	padding-top:0px;
@@ -576,10 +613,11 @@ footer  {
 	padding-bottom:5px;
 	padding-left:5%;
 }
-<!--mobile services page-->
+
+/* mobile services page */
 
 .mobile-services-container	{
-	width:100%;
+	width:90%;
 	margin-bottom:20px;
 }
 .mobile-business-structure	{
@@ -659,7 +697,7 @@ footer  {
 	line-height:1.5;
 }
 
-/*Our Story Page*/
+/* Our Story Page */
 
 .storiescontainer {
 	margin-right:20px;
@@ -673,6 +711,7 @@ footer  {
 	font-family:'Avenir',san-serif;
 	font-size:18px;
 	font-weight:500;
+	margin-top:10px;
 	color:#404040;
 }
 .storycopy	{
@@ -685,22 +724,26 @@ footer  {
 	display:none;
 }
 
-/*Resources Page*/
+/* Resources Page */
 
 .resourcescontainer {
-	align-items:flex-start;
-	justify-content:center;
 	display: -webkit-flex;
 	display: flex;
+	-webkit-align-items:flex-start;
+	align-items:flex-start;
+	-webkit-justify-content:center;
+	justify-content: center;
 	margin-bottom:10px;
+	-webkit-flex-direction: column;
 	flex-direction: column;
+	margin-top: 20px;
 	margin-right:20px;
 	margin-left:20px;
 }
 .resourcecopy	{
 	font-family:'Avenir',san-serif;
 	font-size:14px;
-	line-height:1.4;
+	line-height:2;
 	margin-top:10px;
 }
 /* Search Results */
@@ -720,11 +763,10 @@ footer  {
 	color:#5c4279;
 }
 
-/*Thank You*/
+/* Thank You */
 #thankyoumessage {
 	margin-top:20px;
 	margin-bottom:300px;
-}
 }
 
 /* Tablet Layout: 481px to 803px. Inherits styles from: Mobile Layout. */
@@ -736,6 +778,11 @@ footer  {
 	clear: none;
 	float: none;
 }
+.welcomeparagraph	{
+	text-align:left;
+	font-size:14px;
+	line-height:1.6;
+}
 .zeroMargin_tablet {
     margin-left: 0;
 }
@@ -745,14 +792,44 @@ footer  {
 .contactformslist	{
 	margin-left: 20px;
 }
+#clientlogin {
+	width:40%;
+}
+#pathscolumn {
+	width:40%;
+}
+.resourcescontainer {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-justify-content:center;
+	justify-content:center;
+	-webkit-align-items:flex-start;
+	align-items:flex-start;
+	margin-top:20px;
+	margin-bottom:10px;
+}
+.resourcescontainerleft {
+	min-width: 40%;
+}
+.resourcesmiddlecontainer {
+	min-width: 10%;
+}
+.resourcescontainerright {
+	min-width: 40%;
+}
 }
 
 @media only screen and (min-width: 481px) and (max-width: 803px) {
 .contentcontainer {
+	-webkit-flex-direction: row;
 	flex-direction: row;
-	display: -webkit-flex;
+	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
+	-webkit-justify-content: space-around;	
 	justify-content: space-around;	
+	-webkit-align-items: baseline;
 	align-items: baseline;
 }
 }
@@ -761,24 +838,20 @@ footer  {
 #headerrow {
 	display:none;	
 }
-
 .contentcolumn {
+	-webkit-order: 2;
 	order: 2;
 }
-
 .intro {
+	-webkit-order: 1;
 	order: 1;
 }
-
 #clientlogin {
+	-webkit-order: 3;
 	order: 3;
 }
-
 .footercontent h3 {
 	font-size:14px;
-}
-#footertagline	{
-	margin-top:20px;
 }
 .forgotpassword {
 	margin-top:30px;
@@ -786,11 +859,17 @@ footer  {
 .shortforgotpassword {
 	margin-top:20px;
 }
+input[type="text"], input[type="number"], textarea {
+	font-size: 16px;
+}
 }
 /* Desktop Layout: 804px to a max of 1365px.  Inherits styles from: Mobile Layout and Tablet Layout. */
 
 @media only screen and (min-width: 804px) {
 
+.maincontainer {
+	padding-bottom: 200px;
+}
 .gridContainer {
 	width: 100%;
 	clear: none;
@@ -816,12 +895,15 @@ footer  {
 }
 .contactformslist	{
 	max-width:804px;
+	-webkit-justify-content:center;
 	justify-content:center;
 }
 .shortcontactforms	{
+	font-size:12px;
 	width:500px;
 }
 .tallcontactforms	{
+	font-size:12px;
 	width:500px;
 }
 header  {
@@ -833,13 +915,17 @@ header  {
 	width:100%;
 }
 .rowcontainer	{
-	display: flex;
 	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
 	flex-direction: row;
+	-webkit-align-items: left;
 	align-items: left;
 }
 #headerrow {
+	-webkit-align-items:center;
 	align-items: stretch;
+	-webkit-justify-content: center;
 	justify-content: center;
 }
 .headercontent	{
@@ -850,17 +936,15 @@ header  {
 	width:124px;
 	height:116px;
 	margin-top: 17px;
-	display: -webkit-flex;
+	-webkit-flex: none;
 	flex: none;
 }
 #logodesktop:hover {
 	background-image:url(images/desktoplogo_hover.svg);
 }
-
 .clickable {
 	position: relative;
 }
-
 .clickable a {
 	position:absolute;
 	width:100%;
@@ -873,13 +957,12 @@ header  {
 	opacity: 0; /*workaround to make clickable in IE */
 	filter: alpha(opacity=1); /*workaround to make clickable in IE */ 
 }
-
 .clickable p {
 }
-
 .titlecontainer	{
-	display: flex;
 	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
 	flex-direction: row;
 }
 #nav	{
@@ -1054,20 +1137,23 @@ input[type=text]	{
 	display: none;
 }
 .contentcontainer {
-	align-items:flex-start;
 	display: -webkit-flex;
-	justify-content:center;
 	display: flex;
+	-webkit-align-items:flex-start;
+	align-items:flex-start;
+	-webkit-justify-content:center;
+	justify-content:center;
+	-webkit-flex-direction: row;
+	flex-direction: row;
 	margin-top:25px;
 	margin-bottom:0;
-	flex-direction: row;
 }
 .contentcolumn {
-	display: flex;
 	display: -webkit-flex;
-	flex-direction:column;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
 }
-
 .contentheader	{
 	font-family:'AvenirBold', san-serif;
 	margin-left:0px;
@@ -1079,16 +1165,19 @@ input[type=text]	{
 	padding-top:2px;
 	width: 100%;
 }
+#pathscolumn {
+	width: 138px;
+}
 .pathlinks	{	
 	display: flex;
 	display: -webkit-flex;
+	-webkit-flex-direction: row;
 	flex-direction: row;
 	margin: 0;
 	font-family:'Avenir', san-serif;
 	font-size:11px;
 	background-position:inherit;
 	background-size:auto;
-	
 }
 .pathlinks li {
 	padding-top:10px;
@@ -1097,32 +1186,39 @@ input[type=text]	{
 	max-height:18px;
 	text-align:left center;
 }
-.desktopbusinessstructure {
+
+.pathlinks .desktoppathlink {
+	display: block;
+}
+.pathlinks .mobilepathlink {
+	display: none;
+}
+
+.pathsbusinessstructure {
 	background:url(images/desktopbusinessstructure.svg) no-repeat;
 	background-size:18px;
 	background-position:left center;
 }
-.desktopbookkeeping {
+.pathsbookkeeping {
 	background:url(images/desktopbookkeeping.svg) no-repeat;
 	background-size:18px;
 	background-position:left center;
 }
-.desktoptaxprep {
+.pathstaxprep {
 	background:url(images/desktoptaxprep.svg) no-repeat;
 	background-size:18px;
 	background-position:left center;
 }
-.desktoppayroll {
+.pathspayroll {
 	background:url(images/desktoppayroll.svg) no-repeat;
 	background-size:18px;
 	background-position:left center;
 
 }
-.desktopbusinesscoach {
+.pathsbusinesscoach {
 	background:url(images/desktopbusinesscoach.svg) no-repeat;
 	background-size:18px;
 	background-position:left center;
-
 }
 /* unvisited link */
 .pathlinks a:link {
@@ -1142,6 +1238,10 @@ input[type=text]	{
 	text-align:center;
 	padding-bottom: 0px;
 }
+.welcomeparagraph {
+	font-size:12px;
+	margin-top:0;
+}
 #tagline	{
 	text-align:center;
 	padding-top:4px;
@@ -1154,27 +1254,31 @@ input[type=text]	{
 	padding: 0;
 }
 #clientlogin	{
+	width:138px;
 	margin-top: 0px;
 }
 #clientlogin ul li:first-child {
 	margin-bottom: 10px;
 }
 #clientloginpage	{
-	margin-top: 20px;
-	margin-bottom:100px;
+	margin-top: 60px;
+	margin-bottom:160px;
 }
 #clientloginpage ul li:first-child {
 	margin-bottom: 10px;
 }
-
 .loginbox	{
-	width: 138px;
+	font-size:12px;
+	width: 132px;
 	height:22px;
 	margin-left:0px;
 	margin-right:0px;
 	padding-left:5px;
 }
 .loginbutton	{
+	font-size:10px;
+	text-align:center;
+	line-height:2.2;
 	height:24px;
 	width:50px;
 	margin-left:0px;
@@ -1182,8 +1286,9 @@ input[type=text]	{
 	margin-bottom:29px;
 }
 .forgotpassword	{
+	font-size:11px;
 	margin-left:0px;
-	margin-top:14px;
+	margin-top:3px;
 }
 .shortforgotpassword	{
 	margin-left:0px;
@@ -1192,7 +1297,7 @@ input[type=text]	{
 #footertagline	{
 	display:block;
 	margin-top:0px;
-	margin-bottom:-9px;
+	bottom: 137px;
 	margin-left:15%;
 	padding: 0px;
 	font-size:24px;
@@ -1204,15 +1309,18 @@ footer  {
 	border-top: #83c414 solid 8px;
 }
 .footercontent	{
-	align-items:center;
-	justify-content:center;
-	display: flex;
 	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
 	flex-direction: row;
+	-webkit-justify-content:center;
+	justify-content:center;
+	-webkit-align-items:center;
 	align-items:center;
 	padding-top:12px;
 }
 .footercontent li	{
+	-webkit-align-items:center;
 	align-items:center;
 	padding-top:20px;
 	padding-right:40px;
@@ -1237,7 +1345,6 @@ footer  {
 	background:url(images/desktopfootermail.svg) no-repeat center;
 	background-size:20px;
 }
-
 .subfooter	{
 	background-color:#46325c;
 	height:30px;
@@ -1250,12 +1357,12 @@ footer  {
 	height:160px;
 }
 #steppingstones	{
-	background-image:url('images/steppingstones.svg');
+	background:url(images/steppingstonesnative.png);
 	width: 280px;
 	height: 404px;
 	position:relative;
 	margin-top:28px;
-	margin-bottom: 80px;
+	margin-bottom: 50px;
 }
 #steppingstones div	{
 	position: absolute;
@@ -1332,8 +1439,10 @@ footer  {
 /*Our Story Page*/
 
 .storiescontainer {
+	margin-top:40px;
 	margin-left:0px;
 	max-width:600px;
+	-webkit-justify-content:center;
 	justify-content:center;
 	margin-right:20px;
 }
@@ -1343,27 +1452,34 @@ footer  {
 .storyheader {
 }
 .RightSidebar {
+	margin-top:40px;
 	display:block;
 }
 
 /*Resources Page*/
 
 .resourcescontainer {
-	align-items:flex-start;
 	display: -webkit-flex;
-	justify-content:center;
 	display: flex;
-	margin-bottom:10px;
+	-webkit-flex-direction: row;
 	flex-direction: row;
+	-webkit-justify-content:center;
+	justify-content:center;
+	-webkit-align-items:flex-start;
+	align-items:flex-start;
+	margin-top:50px;
+	margin-bottom:10px;
 }
 .resourcescontainerleft {
 	min-width:400px;
+}
+.resourcesmiddlecontainer {
+	min-width: 0;
 }
 .resourcescontainerright {
 	min-width:400px;
 }
 .resourcecopy {
-	margin-bottom:20px;
 }
 
 /*Search Results*/
@@ -1371,6 +1487,7 @@ footer  {
 	margin-left:0px;
 	margin-right:0px;
 	max-width:804px;
+	-webkit-justify-content:center;
 	justify-content:center;
 	margin-bottom: 40px;
 }

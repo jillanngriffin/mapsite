@@ -1,26 +1,19 @@
 <!doctype html>
-<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
-<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
-<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="">
-<!--<![endif]-->
+<html>
 <head>
 <title>Management &amp; Accounting Professionals, Inc (MAP) </title>
 <meta name="description"
-	content="Accounting Done Differently"	/>
+	content="Accounting Done Differently">
 <meta name="keywords"
-	content="accounting, accountant, management, loveland, ohio"
+	content="accounting, accountant, management, loveland, ohio">
 <meta http-equiv="author"
-	content="Jill Griffin" /> <!--jillgriffindesign.com-->
+	content="Jill Griffin"> <!--jillgriffindesign.com-->
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" >
 <link href="boilerplate.css" type="text/css">
 <link href="mapsite.css" rel="stylesheet" type="text/css">
-<link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
 
-<!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript">
 
@@ -47,18 +40,25 @@
 		 });
 		 
 		 $('#mobile-search-icon').click(function() {
-			 $('.mobile-search').toggleClass('mobile-search-expand');
+			 $('.searcharea').toggleClass('mobile-search-expand');
 			 $('#mobile-search-icon').toggleClass('mobile-search-button-hide');
 			 $('.searchmobile').focus();
 		 });
 		 
-		 $('.mobile-search-close').click(function() {
-			 $('.mobile-search').toggleClass('mobile-search-expand');
-			 $('#mobile-search-icon').toggleClass('mobile-search-button-hide');
-		 });
-		 
 		 $('#logomobile').click(function() {
 			 window.location.href = 'index.html';
+		 });
+		 
+		$('#contactbtn').click(function() {
+			 window.location.href = 'contact.html';
+		 });
+		 
+		 $('#resourcesbtn').click(function() {
+			 window.location.href = 'resources.html';
+		 });
+		 
+		 $('#ourstorybtn').click(function() {
+			 window.location.href = 'ourstory.html';
 		 });
 		 
 	});
@@ -70,12 +70,12 @@
             <div class="responsive-menu-close">
                 <div class="closebutton">
                 </div>
-                <ul>
+                <ul class="responsive-menu-btns">
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="#">Resources</a></li>
-                    <li><a href="#">Our Story</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="ourstory.html">Our Story</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="#">Client Login</a></li>
+                    <li><a href="clientlogin.html">Client Login</a></li>
                 </ul>
                 <ul class="menu-contact">
                     <li class="menuphone"><a href="tel:5137749600">Phone: 513.774.9600</a></li>
@@ -86,27 +86,29 @@
              </div>
          </div><!--end responsive menu-->
     
-    <div class="clearfix" id="maincontainer">
+    <div class="clearfix maincontainer">
               <header><!--begin desktop header-->
               
                       <div class="mobile-nav"><!--mobile menu-->
-                      		<div id="logomobile" class="clickable">
-                            	<a href="index.html"></a>
-                      		</div>
-                            <div id="mobile-search-icon">
-                            </div>
-                            <div class="mobile-search"><!--mobile search-->
+                      		<div class="menuarea">
+                                <div id="logomobile">
+                                </div>
+                                <div id="mobile-search-icon">
+                                </div>
                                 <div class="mobile-search-close"><!--mobile search close-->
                                 </div>
-                                <input type="text" class="searchmobile"></input>
-         					</div>
-                            <div class="menu-btn" id="menu-btn">
+                                <div class="menu-btn" id="menu-btn">
+                                </div>
+                            </div>
+                            <div class="searcharea">
+                                    <input type="text" class="searchmobile">
                             </div>
                       </div><!--mobile menu-->
               
               
               	<div id="headerrow" class="rowcontainer">
-                       <div id="logodesktop">
+                       <div id="logodesktop" class="clickable">
+                   		<a href="index.html"></a>
                         </div>
                     <div class="headercontent"><!--begin header content-->
               
@@ -118,7 +120,7 @@
                             <li class="desktopheaderphone"><a href="tel:5137749600">513.774.9600</a></li>
                             <li class="desktopheaderemail"> <a href="mailto:pgross@mapaccounting.com">pgross@mapaccounting.com</a></li>
                             <li class="desktopheadermail"> <a href="https://www.google.com/maps/place/411+W+Loveland+Ave,+Loveland,+OH+45140/@39.2686159,-84.2623978,17z/data=!3m1!4b1!4m2!3m1!1s0x8840f8ae8bfb01a5:0x95b2f75cf4e54549" target="_blank">411 W. Loveland Ave. #201 <br>Loveland, OH 45140</a></li>
-                            <li><input type="text" class="searchdesktop"></input></li>
+                            <li><input type="text" class="searchdesktop"></li>
                         </ul>
                             <nav id="nav" role="navigation">
                                 <a href="#nav" title="Show navigation">Show navigation</a>
@@ -148,8 +150,8 @@
                                         </li>
                                     </ul>
                                     </li>
-                                  <li><a href="#">Resources</a></li>
-                                  <li><a href="#">Our Story</a></li>
+                                  <li><a href="resources.html">Resources</a></li>
+                                  <li><a href="ourstory.html">Our Story</a></li>
                                   <li><a href="contact.html">Contact</a></li>
                                 </ul>
                      	   </nav>
@@ -161,7 +163,7 @@
                 </div>
       
       			<div class="contentcolumn contentcontainer mobile-services-container"><!--begin mobile services-->
-                    		<ul><!--begin business structure-->
+                    		<ul id="businessstructure"><!--begin business structure-->
                                 <li class="mobile-business-structure ServicesHeader">Business Structure</li>
                                 <li class="ServicesSubHeader">Set Your Business up Correctly, the First Time</li>
                                 <li class="ServicesCopy">Poor business structure can lead to tax and cash flow problems. Most small businesses file their earnings as a sole proprietorship. While this is the easiest structure to set up, it’s also the most unfavorable tax structure. In evaluating your business structure, we can:<br></li>
@@ -172,9 +174,9 @@
                                         <li>File all paperwork for business structure conversion, including late elections for prior years </li>
                                         <li>Coordinate a complete review, and process all compliance requirements</li>
                              </ul><!--end business structure-->
-                                    
-                        	 <ul><!--begin bookkeeping-->
-                                <li class="mobile-bookkeeping ServicesHeader">Bookeeping</li>
+                             
+                             <ul id="bookkeeping"><!--begin bookkeeping-->
+                                <li class="mobile-bookkeeping ServicesHeader">Bookkeeping</li>
                                 <li class="ServicesSubHeader">Stop the Pain, Take a Proactive Approach</li>
                                 <li class="ServicesCopy">Is your current bookkeeping accurate and up-to-date? Do you have ready accessto current information? If not, turn over painful bookkeeping to MAP. Accurate record-keeping is essential to every successful business. Our bookkeeping services include<br></li>
                              </ul>
@@ -185,7 +187,7 @@
                                         <li>Budget / Cash flow preparation </li>
                             </ul><!--end bookkeeping-->
                         
-                        	<ul><!--begin tax prep-->
+                        	<ul id="taxprep"><!--begin tax prep-->
                                 <li class="mobile-taxprep ServicesHeader">Tax Preparation</li>
                                 <li class="ServicesSubHeader">Tax Preparation You can Count on – Convenient, Accurate and Affordable</li>
                                 <li class="ServicesCopy">We realize tax planning and preparation may not be on everyone’s “fun things to do” list. (Fortunately, it’s at the top of ours.) To minimize your tax burden andmaximize profit, a good tax plan is paramount. With MAP’s tax return preparation, you can count on:<br></li>
@@ -197,7 +199,7 @@
                                         <li>Electronic remittance</li>
                             </ul><!--end tax prep-->
                                     
-                         	<ul><!--begin payroll-->
+                         	<ul id="payroll"><!--begin payroll-->
                                 <li class="mobile-payroll ServicesHeader">Payroll</li>
                                 <li class="ServicesSubHeader">Personalized Service with Complete, Cost-Effective Solutions</li>
                                 <li class="ServicesCopy">We do payroll so you don’t have to — on time, every time, quickly and accurately. MAP has a small business heart and soul, with large-company resources. Change the way you handle payroll, and focus on what you do best — growing your business. MAP payroll services provide:<br></li>
@@ -215,7 +217,7 @@
                                         <li>Mobile app for employees</li>
                              </ul><!--end payroll-->
                                     
-                            <ul><!--begin Business Coaching-->
+                            <ul id="businesscoaching"><!--begin Business Coaching-->
                                 <li class="mobile-business-coaching ServicesHeader">Business Coaching</li>
                                 <li class="ServicesSubHeader">From One Entrepreneur to Another</li>
                                 <li class="ServicesCopy">Entrepreneurs typically go their own way. They build a business from their own great ideas. Over time, being independent and self-sufficient doesn’t always work to your advantage. MAP knows where entrepreneurs need to spend their time. In fact, that’s our coaching focus.<br><br>When we handle the details, you can concentrate on profitability. Coaching involves where you want to go and how to get there — not just where you’ve been. By design, MAP focuses on your needs and wants with:<br></li>
@@ -227,11 +229,12 @@
                                     </ul><!--end business coaching-->
                 </div><!--end mobile services-->
               
+                   <div class="footercontainer">
                    <p id="footertagline">Become Our Next Client!</p>   
-         	  <footer>
+              <footer>
               		<ul class="footercontent">
                     	<li class="desktopfooterphone"><a href="tel:5137749600"><h3>Phone: 513.774.9600</h3></a></li>
-                        <li class="desktopfooterfax"> <h3>Fax: 513.774.7820</h3></li>
+                        <li class="desktopfooterfax"> <a href="tel:5137747820"><h3>Fax: 513.774.7820</h3></a></li>
                         <li class="desktopfooteremail"><a href="mailto:pgross@mapaccounting.com?"><h3>pgross@mapaccounting.com</h3></a></li>
                         <li class="desktopfootermail"> <a href="https://www.google.com/maps/place/411+W+Loveland+Ave,+Loveland,+OH+45140/@39.2686159,-84.2623978,17z/data=!3m1!4b1!4m2!3m1!1s0x8840f8ae8bfb01a5:0x95b2f75cf4e54549" target="_blank"><h3>411 W. Loveland Ave. #201</h3></a></li>
                     </ul>
@@ -239,6 +242,7 @@
                   <h2> © Copyright 2015 Management & Accounting Professionals, Inc. - MAP </h2>
                   </div>
 	         </footer>
+             </div> <!--footercontainer-->
 </div>
 </body>
 </html>

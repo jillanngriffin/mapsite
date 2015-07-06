@@ -1,22 +1,18 @@
 <!doctype html>
-<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
-<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
-<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="">
-<!--<![endif]-->
+<html>
 <head>
 <title>Management &amp; Accounting Professionals, Inc (MAP) </title>
 <meta name="description"
-	content="Accounting Done Differently"	/>
+	content="Accounting Done Differently">
 <meta name="keywords"
-	content="accounting, accountant, management, loveland, ohio"	/>
+	content="accounting, accountant, management, loveland, ohio">
 <meta http-equiv="author"
-	content="Jill Griffin" /> <!--jillgriffindesign.com-->
+	content="Jill Griffin"> <!--jillgriffindesign.com-->
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" >
 <link href="boilerplate.css" type="text/css">
 <link href="mapsite.css" rel="stylesheet" type="text/css">
-<link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
 
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript">
@@ -44,14 +40,9 @@
 		 });
 		 
 		 $('#mobile-search-icon').click(function() {
-			 $('.mobile-search').toggleClass('mobile-search-expand');
+			 $('.searcharea').toggleClass('mobile-search-expand');
 			 $('#mobile-search-icon').toggleClass('mobile-search-button-hide');
 			 $('.searchmobile').focus();
-		 });
-		 
-		 $('.mobile-search-close').click(function() {
-			 $('.mobile-search').toggleClass('mobile-search-expand');
-			 $('#mobile-search-icon').toggleClass('mobile-search-button-hide');
 		 });
 		 
 		 $('#logomobile').click(function() {
@@ -79,7 +70,7 @@
             <div class="responsive-menu-close">
                 <div class="closebutton">
                 </div>
-                <ul>
+                <ul class="responsive-menu-btns">
                     <li><a href="Services.html">Services</a></li>
                     <li><a href="resources.html">Resources</a></li>
                     <li><a href="ourstory.html">Our Story</a></li>
@@ -95,21 +86,22 @@
              </div>
          </div><!--end responsive menu-->
     
-    <div class="clearfix" id="maincontainer">
+    <div class="clearfix maincontainer">
               <header><!--begin desktop header-->
               
                       <div class="mobile-nav"><!--mobile menu-->
-                      		<div id="logomobile">
-                            <a href="index.html"></a>
-                      		</div>
-                            <div id="mobile-search-icon">
-                            </div>
-                            <div class="mobile-search"><!--mobile search-->
+                      		<div class="menuarea">
+                                <div id="logomobile">
+                                </div>
+                                <div id="mobile-search-icon">
+                                </div>
                                 <div class="mobile-search-close"><!--mobile search close-->
                                 </div>
-                                <input type="text" class="searchmobile">
-         					</div>
-                            <div class="menu-btn" id="menu-btn">
+                                <div class="menu-btn" id="menu-btn">
+                                </div>
+                            </div>
+                            <div class="searcharea">
+                                    <input type="text" class="searchmobile">
                             </div>
                       </div><!--mobile menu-->
               
@@ -166,7 +158,7 @@
                  </div><!-- end row container -->
               </header><!--end desktop header-->
               
-              <div id="structureUnderHeaderSecondary">
+              <div id="underHeader">
                 </div>
                         
                         <div class="resourcescontainer">
@@ -202,12 +194,12 @@
                             </ul>
                         </div><!--end resources container-->
                         
-                  <p id="footertagline">Become Our Next Client!</p> 
-                   
-         	  <footer>
+                  <div class="footercontainer">
+                   <p id="footertagline">Become Our Next Client!</p>   
+              <footer>
               		<ul class="footercontent">
-                    	<li class="desktopfooterphone"> <h3>Phone: 513.774.9600</h3></li>
-                        <li class="desktopfooterfax"> <h3>Fax: 513.774.7820</h3></li>
+                    	<li class="desktopfooterphone"><a href="tel:5137749600"><h3>Phone: 513.774.9600</h3></a></li>
+                        <li class="desktopfooterfax"> <a href="tel:5137747820"><h3>Fax: 513.774.7820</h3></a></li>
                         <li class="desktopfooteremail"><a href="mailto:pgross@mapaccounting.com?"><h3>pgross@mapaccounting.com</h3></a></li>
                         <li class="desktopfootermail"> <a href="https://www.google.com/maps/place/411+W+Loveland+Ave,+Loveland,+OH+45140/@39.2686159,-84.2623978,17z/data=!3m1!4b1!4m2!3m1!1s0x8840f8ae8bfb01a5:0x95b2f75cf4e54549" target="_blank"><h3>411 W. Loveland Ave. #201</h3></a></li>
                     </ul>
@@ -215,6 +207,7 @@
                   <h2> © Copyright 2015 Management & Accounting Professionals, Inc. - MAP </h2>
                   </div>
 	         </footer>
+             </div> <!--footercontainer-->
 </div>
 </body>
 </html>
