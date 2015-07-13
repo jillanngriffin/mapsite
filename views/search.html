@@ -34,49 +34,45 @@ Do the following if you're using your customized build of modernizr (http://www.
 <script type="text/javascript">
 
 	jQuery(function($){
+		
 		var openMenu = function() {
 			$('.responsive-menu').toggleClass('expand');
 			$('#maincontainer').toggleClass('dim');
 			setTimeout(function() {$('#maincontainer').on("click", closeMenu)}, 100);
 		};
-
+	
 		var closeMenu = function() {
 			$('.responsive-menu').toggleClass('expand');
 			$('#maincontainer').toggleClass('dim');
 			$('#maincontainer').off("click", closeMenu);
 		};
-
+		
 		 $( '.menu-btn' ).click(function(){
 			 openMenu();
 		 });
-
+		 
 		 $( '.closebutton' ).click(function(){
 			 closeMenu();
 		 });
-
+		 
 		 $('#mobile-search-icon').click(function() {
-			 $('.mobile-search').toggleClass('mobile-search-expand');
+			 $('.searcharea').toggleClass('mobile-search-expand');
 			 $('#mobile-search-icon').toggleClass('mobile-search-button-hide');
 			 $('.searchmobile').focus();
 		 });
-
-		 $('.mobile-search-close').click(function() {
-			 $('.mobile-search').toggleClass('mobile-search-expand');
-			 $('#mobile-search-icon').toggleClass('mobile-search-button-hide');
-		 });
-
+		 
 		 $('#logomobile').click(function() {
 			 window.location.href = 'index.html';
 		 });
-
-		 $('#contactbtn').click(function() {
+		 
+		$('#contactbtn').click(function() {
 			 window.location.href = 'contact.html';
 		 });
-
+		 
 		 $('#resourcesbtn').click(function() {
 			 window.location.href = 'resources.html';
 		 });
-
+		 
 		 $('#ourstorybtn').click(function() {
 			 window.location.href = 'ourstory.html';
 		 });
