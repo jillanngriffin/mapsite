@@ -187,6 +187,9 @@ Do the following if you're using your customized build of modernizr (http://www.
                 <section class="contentcontainer">
                     	 <div class="searchcontainer">
                             <ul>
+                            	{% if hits.length == 0 %}
+                                <li>No results found.</li>
+                                {% endif %}
 															{% for hit in hits %}
 															<li class="searchurl"><a href="/{{ hit.document.slug }}">{{ hit.document.title }}</a></li>
 															<li class="storycopy">{{ hit.document.content|striptags }}</li>
@@ -196,19 +199,7 @@ Do the following if you're using your customized build of modernizr (http://www.
 
                   </section><!--end content container-->
 
-                  <p id="footertagline">Become Our Next Client!</p>
-
-         	  <footer>
-              		<ul class="footercontent">
-                    	<li class="desktopfooterphone"> <h3>Phone: 513.774.9600</h3></li>
-                        <li class="desktopfooterfax"> <h3>Fax: 513.774.7820</h3></li>
-                        <li class="desktopfooteremail"><a href="mailto:pgross@mapaccounting.com?"><h3>pgross@mapaccounting.com</h3></a></li>
-                        <li class="desktopfootermail"> <a href="https://www.google.com/maps/place/411+W+Loveland+Ave,+Loveland,+OH+45140/@39.2686159,-84.2623978,17z/data=!3m1!4b1!4m2!3m1!1s0x8840f8ae8bfb01a5:0x95b2f75cf4e54549" target="_blank"><h3>411 W. Loveland Ave. #201</h3></a></li>
-                    </ul>
-                  <div class="rowcontainer subfooter">
-                  <h2> © Copyright 2015 Management & Accounting Professionals, Inc. - MAP </h2>
-                  </div>
-	         </footer>
+         	
 </div>
 </body>
 </html>
