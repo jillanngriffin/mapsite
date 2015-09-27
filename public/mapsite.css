@@ -956,9 +956,6 @@ header  {
 	-webkit-flex: none;
 	flex: none;
 }
-#logodesktop:hover {
-	background-image:url(images/desktoplogo_hover.svg);
-}
 .clickable {
 	position: relative;
 }
