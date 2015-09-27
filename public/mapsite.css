@@ -6,22 +6,6 @@ img, object, embed, video {
 .ie6 img {
 	width:100%;
 }
-@font-face {
-	font-family: 'EBGaramond';
-	src:url(EBGaramond12-Regular.ttf);
-}
-@font-face {
-	font-family: 'GaramondBold';
-	src:url(Garamond%20Bold.ttf);
-}
-@font-face {
-	font-family: 'Avenir';
-	src:url(Avenir-Roman.otf);
-}
-@font-face {
-	font-family: 'AvenirBold';
-	src:url(AvenirNextLTPro-Bold.otf);
-}
 html, body	{
 	margin:0;
 }
@@ -57,56 +41,59 @@ a {
 	text-decoration:none;
 }
 p	{
-	font-family:'Avenir',san-serif;
+	font-family:'Ubuntu', sans-serif;
 	font-size:12px;
 	font-color:#404040;
 }
 h2	{
-	font-family:'Avenir', san-serif;
-	font-weight:300;
+	font-family:'Ubuntu', sans-serif;
+	font-weight:400;
 	color:#8e79a4;
 	font-size:10px;
 }
 h3	{
-	font-family:'Avenir', san-serif;
-	color:#ffffff;
+	font-family:'Ubuntu', sans-serif;
+	font-weight: 400;
+    color:#ffffff;
 	font-size:11px;
-	font-weight:400;
 }
 h4	{
-	font-family: 'EBGaramond', serif;
-	font-weight:100px;
+	font-family: 'Crimson+Text', serif;
+	font-weight: 400;
 	font-size:20px;
 	color: #ffffff;
 	margin:0;
 }
 h5	{
-	font-size:11px;
-	font-weight:600;
+    font-family: 'Ubuntu';
+    font-weight: 700;
+	font-size:14px;
 	margin: 0;
 }
 h6	{
-	font-family:'Avenir', san-serif;
-	color:#cec5d6;
-	font-weight:200;
+	font-family:'Ubuntu', sans-serif;
+	font-weight: 300;
+    color:#cec5d6;
 	text-decoration:underline;
 	margin:0;
 	margin-top:4px;
-	margin-left: 214px;
+	margin-left: 194px;
 }
 h9	{
-	font-family:'GaramondBold', serif;
-	font-size:17px;
-	font-weight:900;
+	font-family:'Crimson+Text', serif bold;
+    color: #565656;
+	font-weight:600;
+    font-size:16px;
 }
 h10	{
-	font-family: 'Avenir',san-serif;
- 	font-size: 20px;
-	font-weight: 500;
+	font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+ 	font-size: 22px;
 	color: #404040;
 }
 h11	{
-	font-family:'Garamond', serif;
+	font-family:'Crimson+Text', serif;
+    font-weight: 400;
 	font-size:30px;
 	color: #684b1b;
 }
@@ -131,7 +118,7 @@ h11	{
 }
 .contactformscontainer	{
 	display: -webkit-flex;
-	display:flex;
+	display: flex;
 	width:100%;
 	-webkit-justify-content:center;
 	justify-content:center;
@@ -149,7 +136,8 @@ h11	{
 	width:100%;
 	height:30px;
 	background-color:#dcdcdc;
-	font-family:'Avenir', san-serif;
+	font-family:'Ubuntu', sans-serif;
+    font-weight: 400;
 	color: #000;
 	font-size:14px;
 	padding-left:5px;
@@ -162,7 +150,8 @@ h11	{
 	width:100%;
 	height:200px;
 	background-color:#dcdcdc;
-	font-family:'Avenir', san-serif;
+	font-family:'Ubuntu', sans-serif;
+    font-weight: 400;
 	color: #000;
 	font-size:14px;
 	padding-left:5px;
@@ -229,7 +218,8 @@ header  {
 	height:24px;
 	border: 0px;
 	padding-left:10px;
-	font-family:'Avenir', san-serif;
+	font-family:'Ubuntu', sans-serif;
+    font-weight: 400;
 	font-size:14px;
 	color:#ffffff;
 }
@@ -273,9 +263,9 @@ header  {
 	margin-bottom: 0;
 }
 .responsive-menu li	{
-	font-family:'Avenir', san-serif;
+	font-family:'Ubuntu', sans-serif;
 	font-size:18px;
-	font-weight:600;
+	font-weight:400;
 	color: #5c4279;
 	text-align:center;
 	line-height:60px;
@@ -327,7 +317,8 @@ header  {
 	padding-bottom:1000px;
 }
 .menu-contact li	{
-	font-family:'Avenir', san-serif;
+	font-family:'Ubuntu', sans-serif;
+    font-weight: 400;
 	font-size:14px;
 	color:#fff;
 	text-align:left;
@@ -367,30 +358,32 @@ header  {
 }
 /* welcome */
 .welcome	{
-	font-family:'EBGaramond', san-serif;
+	font-family:'Crimson+Text', serif;
+    font-weight: 400;
 	font-size:38px;
 	color:#5c4279;
 	text-align:center;
-	padding-bottom: 0px;
 }
 .welcomeparagraph	{
-	font-family:'Avenir', san-serif;
-	font-size:16px;
-	font-color:#404040;
+	font-family:'Ubuntu', sans-serif;
+    font-weight: 400;
+	font-size:15px;
+	font-color:#565656;
 	text-align:left;
-	line-height:1.6;
+	line-height: 1.6;
 	margin-top:4px;
 }
 #tagline	{
 	text-align:center;
 	padding-top:8px;
-	padding-bottom:10px;
+	padding-bottom:12px;
 }
 .intro	{
 	color:#404040;
 	margin-right: 20px;
 	margin-left: 20px;
 	margin-bottom: 30px;
+    margin-top: -7px;
 	padding: 0;
 }
 #pathscolumn {
@@ -401,9 +394,9 @@ header  {
 	display: -webkit-flex;
 	-webkit-flex-direction: row;
 	flex-direction: row;
-	font-family:'Avenir', san-serif;
+	font-family:'Ubuntu', sans-serif;
+    font-weight: 400;
 	font-size:16px;
-	font-weight:500;
 	background-position:inherit;
 	background-size:auto;
 }
@@ -465,11 +458,11 @@ header  {
 }
 /* unvisited link */
 .pathlinks a:link {
-    color: #404040;
+    color: #565656;
 }
 /* visited link */
 .pathlinks a:visited {
-    color: #404040;
+    color: #565656;
 }
 /* mouse over link */
 .pathlinks a:hover {
@@ -492,10 +485,11 @@ header  {
 	display: block;
 	-webkit-flex-direction:column;
 	flex-direction:column;
-	margin-left: 20px;
+    margin-left: 20px;
 }
 .contentheader	{
-	font-family:'AvenirBold', san-serif;
+	font-family:'Ubuntu', sans-serif;
+    font-weight: 700;
 	color:#565656;
 	border-bottom: 1px solid #b9b9b9;
 	padding-bottom:2px;
@@ -518,7 +512,8 @@ header  {
 	width:94%;
 	height:36px;
 	background-color:#dcdcdc;
-	font-family:'Avenir', san-serif;
+	font-family:'Ubuntu', sans-serif;
+    font-weight: 400;
 	color: #000;
 	font-size:14px;
 	padding-left:5px;
@@ -526,10 +521,10 @@ header  {
 	border:0;
 }
 .loginbutton	{
-	font-family:'Avenir', san-serif;
-	color:#ffffff;
+	font-family:'Ubuntu', sans-serif;
+    color:#ffffff;
 	font-size:12px;
-	font-weight:600;
+	font-weight:400;
 	line-height:2.3;
 	background-color:#ad3b8f;
 	margin-top:20px;
@@ -541,18 +536,20 @@ header  {
 	margin-bottom:8px;
 }
 .forgotpassword	{
-	font-family:'Avenir', san-serif;
+	font-family:'Ubuntu', sans-serif;
+    font-weight: 400;
 	font-size:14px;
 	color:#b9b9b9;
 	float:left;
 	margin-bottom:20px;
 }
 .shortforgotpassword	{
-	font-family:'Avenir', san-serif;
-	font-size:11px;
+	font-family:'Ubuntu', sans-serif;
+    font-weight: 400;
+	font-size:12px;
 	color:#b9b9b9;
 	float:left;
-	margin-top:-35px;
+	margin-top:0px;
 }
 .footercontainer {
 	position: absolute;
@@ -567,6 +564,7 @@ header  {
 	padding: 0px;
 	font-size:24px;
 	color:#959595;
+    font-weight: 300;
 }
 footer  {
     min-height: 100px;
@@ -596,11 +594,16 @@ footer  {
 }
 .footercontent	{
 	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 	-webkit-flex-direction:column;
+	-ms-flex-direction:column;
 	flex-direction:column;
 	-webkit-justify-content:left;
+	-ms-flex-pack: left;
 	justify-content:left;
+	-webkit-align-items:left;
+	-ms-flex-align: left;
 	align-items:left;
 	margin-left:10px;
 	padding-top:0px;
@@ -674,26 +677,29 @@ footer  {
 	padding-bottom:2px;
 }
 .ServicesHeader	{
-	font-family:'Avenir',san-serif;
+	font-family:'Ubuntu', sans-serif;
+    font-weight: 400;
 	font-size:20px;
-	font-weight:500;
 	color:#404040;
 	padding-bottom: 5px;
 }
 .ServicesSubHeader	{
-	font-family:'Avenir', san-serif;
-	font-weight:600;
+	font-family:'Ubuntu', sans-serif;
+    font-weight: 400;
 	max-width:440px;
-	font-size:15px;
+	font-size:16px;
 	color:#684b1b;
 }
 .ServicesCopy	{
-	font-family:'Avenir',san-serif;
+	font-family:'Ubuntu', sans-serif;
+    font-weight: 400;
+    margin-top: 5px;
 	font-size:14px;
 	line-height:1.5;
 }
 .ServicesBullets	{
-	font-family:'Avenir',san-serif;
+	font-family:'Ubuntu', sans-serif;
+    font-weight: 400;
 	font-size:14px;
 	list-style:outside;
 	padding-left:16px;
@@ -711,16 +717,18 @@ footer  {
 	margin-bottom: 4px;
 }
 .storyheader	{
-	font-family:'Avenir',san-serif;
+	font-family:'Ubuntu', sans-serif;
+    font-weight: 400;
 	font-size:18px;
-	font-weight:500;
 	margin-top:10px;
 	color:#404040;
 }
 .storycopy	{
-	font-family:'Avenir',san-serif;
+	font-family:'Ubuntu', sans-serif;
+    font-weight: 400;
 	font-size:14px;
 	line-height:1.5;
+    margin-top: 5px;
 	margin-bottom:20px;
 }
 .RightSidebar {
@@ -732,11 +740,11 @@ footer  {
 .resourcescontainer {
 	display: -webkit-flex;
 	display: flex;
-	-webkit-align-items:flex-start;
-	align-items:flex-start;
-	-webkit-justify-content:center;
+	-webkit-align-items: flex-start;
+	align-items: flex-start;
+	-webkit-justify-content: center;
 	justify-content: center;
-	margin-bottom:10px;
+	margin-bottom:30px;
 	-webkit-flex-direction: column;
 	flex-direction: column;
 	padding-top: 60px;
@@ -744,7 +752,8 @@ footer  {
 	margin-left:20px;
 }
 .resourcecopy	{
-	font-family:'Avenir',san-serif;
+	font-family:'Ubuntu', sans-serif;
+    font-weight: 400;
 	font-size:14px;
 	line-height:2;
 	margin-top:10px;
@@ -753,11 +762,14 @@ footer  {
 .searchcontainer {
 	margin-left:20px;
 	margin-right:20px;
-	justify-content:center;
 	margin-bottom: 40px;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content:center;
 }
 .searchurl {
-	font-family:'Avenir', san-serif;
+	font-family:'Ubuntu', sans-serif;
+    font-weight: 400;
 }
 .searchurl a:link {
 	color:#ad3b8f;
@@ -784,7 +796,6 @@ footer  {
 .welcomeparagraph	{
 	text-align:left;
 	font-size:14px;
-	line-height:1.6;
 }
 .zeroMargin_tablet {
     margin-left: 0;
@@ -830,7 +841,7 @@ footer  {
 	flex-direction: row;
 	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
-	-webkit-justify-content: space-around;	
+	-webkit-justify-content: space-around;
 	justify-content: space-around;	
 	-webkit-align-items: baseline;
 	align-items: baseline;
@@ -863,13 +874,16 @@ footer  {
 	margin-top:20px;
 }
 input[type="text"], input[type="number"], textarea {
-	font-size: 16px;
+	font-size: 14px;
 }
 }
 /* Desktop Layout: 804px to a max of 1365px.  Inherits styles from: Mobile Layout and Tablet Layout. */
 
 @media only screen and (min-width: 804px) {
 
+h5  {
+    font-size:11px;
+}
 .maincontainer {
 	padding-bottom: 200px;
 }
@@ -1031,18 +1045,18 @@ header  {
 	margin-right: 5px;
 	padding-left: 50px;
 	padding-right: 50px;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-top: 7px;
+	padding-bottom: 7px;
 	background-color:#cec5d6;
-	font-family: 'Avenir', san-serif;
+	font-family: 'Ubuntu', sans-serif;
 	font-size:13px;
-	font-weight:800;
+	font-weight: 400;
 }
 .navcontainer li:hover {
     color: #5C4279;
 	background-color:#FFFFFF;
-	padding-top:5px;
-	padding-bottom:5px;
+	padding-top:7px;
+	padding-bottom:7px;
 	padding-left:50px;
 	padding-right:50px;
 }
@@ -1066,12 +1080,12 @@ header  {
 	background-color: #ffffff !important;
 }
 .contactcontainer	{
-	padding-top:5px;
+	padding-top:8px;
 }
 .contactcontainer li {
-	font-family: 'Avenir', san-serif;
+	font-family: 'Ubuntu', sans-serif;
 	font-size:12px;
-	font-weight:400;
+	font-weight: 300;
 }
 .contactcontainer a:link {
 	color:#cec5d6;
@@ -1113,7 +1127,8 @@ header  {
 	border: 0px;
 	border-radius:30px;
 	padding-left:8px;
-	font-family:'Avenir', san-serif;
+	font-family:'Ubuntu', sans-serif;
+    font-weight: 400;
 	font-size:12px;
 	color:#ffffff;
 }
@@ -1156,9 +1171,11 @@ input[type=text]	{
 	display: flex;
 	-webkit-flex-direction: column;
 	flex-direction: column;
+    margin-left: 0px;
 }
 .contentheader	{
-	font-family:'AvenirBold', san-serif;
+	font-family:'Ubuntu', sans-serif bold;
+    font-weight: 700;
 	margin-left:0px;
 	color:#565656;
 }
@@ -1170,6 +1187,7 @@ input[type=text]	{
 }
 #pathscolumn {
 	width: 138px;
+    margin-left: -6px;
 }
 .pathlinks	{	
 	display: flex;
@@ -1177,13 +1195,14 @@ input[type=text]	{
 	-webkit-flex-direction: row;
 	flex-direction: row;
 	margin: 0;
-	font-family:'Avenir', san-serif;
-	font-size:11px;
+	font-family:'Ubuntu', sans-serif;
+    font-weight: 400;
+	font-size:12px;
 	background-position:inherit;
 	background-size:auto;
 }
 .pathlinks li {
-	padding-top:10px;
+	padding-top:11px;
 	padding-bottom:10px;
 	padding-left:26px;
 	max-height:18px;
@@ -1196,7 +1215,6 @@ input[type=text]	{
 .pathlinks .mobilepathlink {
 	display: none;
 }
-
 .pathsbusinessstructure {
 	background:url(images/desktopbusinessstructure.svg) no-repeat;
 	background-size:18px;
@@ -1239,21 +1257,22 @@ input[type=text]	{
 /* welcome */
 .welcome	{
 	text-align:center;
-	padding-bottom: 0px;
+	padding: 0px;
 }
 .welcomeparagraph {
 	font-size:12px;
 	margin-top:0;
+    line-height: 1.6;
 }
 #tagline	{
 	text-align:center;
-	padding-top:4px;
-	padding-bottom:10px;
+	padding-top:8px;
+	padding-bottom:12px;
 }
 .intro	{
-	max-width: 420px;
-	margin-right: 30px;
-	margin-left: 42px;
+	max-width: 440px;
+	margin-right: 42px;
+	margin-left: 46px;
 	padding: 0;
 }
 #clientlogin	{
@@ -1265,7 +1284,7 @@ input[type=text]	{
 }
 #clientloginpage	{
 	margin-top: 60px;
-	margin-bottom:160px;
+	margin-bottom:250px;
 }
 #clientloginpage ul li:first-child {
 	margin-bottom: 10px;
@@ -1289,9 +1308,9 @@ input[type=text]	{
 	margin-bottom:29px;
 }
 .forgotpassword	{
-	font-size:11px;
+	font-size:12px;
 	margin-left:0px;
-	margin-top:3px;
+	margin-top:9px;
 }
 .shortforgotpassword	{
 	margin-left:0px;
@@ -1301,7 +1320,7 @@ input[type=text]	{
 	display:block;
 	margin-top:0px;
 	bottom: 137px;
-	margin-left:15%;
+	margin-left:20%;
 	padding: 0px;
 	font-size:24px;
 	color:#959595;
@@ -1349,9 +1368,13 @@ footer  {
 	background-size:20px;
 }
 .subfooter	{
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
 	background-color:#46325c;
 	height:30px;
-	padding-left:15%;
+	padding-left:20%;
 }
 
 	/*Services Pages*/
@@ -1365,7 +1388,7 @@ footer  {
 	height: 404px;
 	position:relative;
 	margin-top:28px;
-	margin-bottom: 50px;
+	margin-bottom: 70px;
 }
 #steppingstones div	{
 	position: absolute;
@@ -1447,7 +1470,7 @@ footer  {
 	max-width:600px;
 	-webkit-justify-content:center;
 	justify-content:center;
-	margin-right:20px;
+	margin-right:60px;
 }
 .storyimage {
 	width:600px;
@@ -1470,8 +1493,8 @@ footer  {
 	justify-content:center;
 	-webkit-align-items:flex-start;
 	align-items:flex-start;
-	padding-top:160px;
-	margin-bottom:10px;
+	padding-top:170px;
+	margin-bottom:70px;
 }
 .resourcescontainerleft {
 	min-width:400px;
