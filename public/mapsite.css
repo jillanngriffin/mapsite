@@ -189,21 +189,23 @@ header  {
 }
 #logomobile	{
 	background:url(images/mobilelogo.svg) no-repeat;
+    background-size: 66px;
 	position:absolute;
 	margin-left:20px;
-	margin-top:8px;
+	margin-top:10px;
 	height:36px;
 	width:66px;
 	cursor:pointer;
 }
 #mobile-search-icon	{
 	background:url(images/searchicon.svg) no-repeat;
+    background-size: 25px;
 	position:absolute;
 	right:0;
-	margin-right:70px;
+	margin-right:80px;
 	margin-top:15px;
-	width:22px;
-	height:22px;
+	width:25px;
+	height:25px;
 	cursor:pointer;
 }
 .mobile-nav {
@@ -215,7 +217,7 @@ header  {
 .searchmobile	{
 	background-color:#ad3b8f;
 	width:90%;
-	height:24px;
+	height:20px;
 	border: 0px;
 	padding-left:10px;
 	font-family:'Ubuntu', sans-serif;
@@ -228,15 +230,18 @@ header  {
 }
 .mobile-search-button-hide {
 	background:url(images/searchclose.png) no-repeat !important;
-	width:20px;
+	background-size:24px;
+    width: 24px;
+    height: 24px;
 }
 .menu-btn	{
 	background-image:url(images/hamburger.svg);
+    background-size: 25px;
 	position:absolute;
 	top:15px;
 	right:20px;
-	width:22px;
-	height:20px;
+	width:25px;
+	height:23px;
 	cursor:pointer;
 }
 .menuarea {
@@ -245,18 +250,22 @@ header  {
 }
 .searcharea {
 	background-color:#ad3b8f;
-	height: 30px;
+	height: 22px;
 	padding: 10px;
 	width:100%;
 	display: none;
 }
 .responsive-menu	{
 	display: none;
-	position:absolute;
+	position:fixed;
+    height: 100%;
 	right:0;
 	z-index:3;
 	width:300px;
 	background-color:#cec5d6;
+}
+#responsive-menu-scroll {
+    overflow-y: auto;
 }
 .responsive-menu ul {
 	margin-top: 10;
@@ -287,11 +296,12 @@ header  {
 }
 .closebutton	{
 	background-image:url(images/closeXbtn.svg);
+    background-size: 24px;
 	position:fixed;
 	top:15px;
 	right:20px;
-	width:22px;
-	height:20px;
+	width:24px;
+	height:22px;
 	cursor:pointer;
 }
 .expand	{
@@ -314,7 +324,7 @@ header  {
 .menu-contact	{
 	background-color:#5c4279;
 	padding-top:3px;
-	padding-bottom:1000px;
+    height: 100%;
 }
 .menu-contact li	{
 	font-family:'Ubuntu', sans-serif;

@@ -71,29 +71,32 @@
 		 $('#ourstorybtn').click(function() {
 			 window.location.href = 'ourstory.html';
 		 });
-
+        
+        $('#responsive-menu-scroll').css('height', $('.responsive-menu').height());
+        
 	});
 </script>
 </head>
 <body>
-
         <div class="responsive-menu"><!--begin responsive menu-->
             <div class="responsive-menu-close">
                 <div class="closebutton">
                 </div>
-                <ul>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="ourstory.html">Our Story</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="clientlogin.html">Client Login</a></li>
-                </ul>
-                <ul class="menu-contact">
-                    <li class="menuphone"><a href="tel:5137749600">Phone: 513.774.9600</a></li>
-                    <li class="menufax">Fax: 513.774.7820</li>
-                    <li class="menuemail"><a href="mailto:pgross@mapaccounting.com?">pgross@mapaccounting.com</a></li>
-                    <li class="menumail"> <a href="https://www.google.com/maps/place/411+W+Loveland+Ave,+Loveland,+OH+45140/@39.2686159,-84.2623978,17z/data=!3m1!4b1!4m2!3m1!1s0x8840f8ae8bfb01a5:0x95b2f75cf4e54549" target="_blank">411 W. Loveland Ave. #201<br>Loveland, OH 45140</a></li>
-                </ul>
+                <div id="responsive-menu-scroll">
+                    <ul class="responsive-menu-btns">
+                        <li><a href="Services.html">Services</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="ourstory.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="clientlogin.html">Client Login</a></li>
+                    </ul>
+                    <ul class="menu-contact">
+                        <li class="menuphone"><a href="tel:5137749600">Phone: 513.774.9600</a></li>
+                        <li class="menufax">Fax: 513.774.7820</li>
+                        <li class="menuemail"><a href="mailto:pgross@mapaccounting.com?">pgross@mapaccounting.com</a></li>
+                        <li class="menumail"> <a href="https://www.google.com/maps/place/411+W+Loveland+Ave,+Loveland,+OH+45140/@39.2686159,-84.2623978,17z/data=!3m1!4b1!4m2!3m1!1s0x8840f8ae8bfb01a5:0x95b2f75cf4e54549" target="_blank">411 W. Loveland Ave. #201<br>Loveland, OH 45140</a></li>
+                    </ul>
+                </div>
              </div>
          </div><!--end responsive menu-->
 
